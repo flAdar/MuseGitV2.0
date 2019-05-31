@@ -1,0 +1,48 @@
+nav {
+    height: 6vh;
+}
+
+#login,#logged{
+ display: none;
+}
+
+#login.show,#logged.show {
+    display: flex;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Important */
+#logged > li {
+    display: flex;
+}
+
+.nav-item > a.material-icons {
+    margin: auto 0;
+    padding: 0 0.375rem;
+}
+
+.dropdown {
+    display: flex;
+}
+.btn[data-toggle="dropdown"] {
+    background: 0;
+    color: rgba(0,0,0,.5);
+}
+.btn[data-toggle="dropdown"] > label {
+    display: flex;
+    margin: 0;
+}
+
+label[data-type="profile-thumbnail"] > span {
+    margin: auto;
+}
+
+label[data-type="profile-thumbnail"] > img {
+    width: 32px;
+    height: 32px;
+}
+

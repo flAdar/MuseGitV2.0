@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand s1" id="dashboard">Musegit</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nativeSupport" aria-controls="nativeSupport" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nativeSupport">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/musespace" >MuseSpace</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/explore" >Explore</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/support">Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/about">About</a>
+            </li>
+        </ul>
+        <div class="dropdown" id="login">
+            <button class="btn" type="button" id="loginDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <label>
+                    <i class="material-icons">person</i>
+                    <span>Guest</span>
+                </label>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                <a class="dropdown-item" routerLink="/login" >Sign in</a>
+                <a class="dropdown-item" routerLink="/register" >Sign up</a>
+            </div>
+        </div>
+        <ul class="navbar-nav" id="logged">
+            <li class="nav-item">
+                <a class="material-icons" routerLink="/notifications" >notifications</a>
+            </li>
+            <li class="nav-item">
+                <a class="material-icons" routerLink="/messages" >email</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="btn" type="button" id="loggedDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <label data-type="profile-thumbnail">
+                            <img src="../../assets/img/bel3.svg">
+                            <span id="displayName">displayName</span>
+                        </label>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="loggedDropdown">
+                        <a class="dropdown-item" routerLink="/profile" >Profile</a>
+                        <a class="dropdown-item" id="signout">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,12 @@
+.container {
+    text-align: center;
+    display: flex;
+    height: 94vh;
+}
+
+.container>div {
+    margin: auto;
+    height: fit-content;
+    padding-bottom: 6vh;
+
+}

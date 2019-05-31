@@ -1,0 +1,413 @@
+<!-- MODALS -->
+
+<!-- edit profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form id="updateProfile">
+                <div class="modal-body width1">
+                    <div class="green-modal-wrap">
+                        <div data-type="cover" class="green-modal-bg">
+                            <a href=""><img src="../../assets/img/pen.svg" alt=""></a>
+                        </div>
+                        <div class="modal-forms-wrap">
+                            <div class="modal-authorr1">
+                                <a>
+                                    <img data-type="photo" src="../../assets/img/bel3.svg" alt="photoURL">
+                                    <button id="editProfilePicture">
+                                        <img src="../../assets/img/pen.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="modalmain-form">
+                                <div class="all-name-wrap">
+                                    <div class="all-name">
+                                        <div class="det-form">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="nick-name">
+                                                            <p>NickName*</p>
+                                                            <input name="displayname" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="single-form">
+                                                            <div class="first-name-lastname">
+                                                                <div class="firstname1">
+                                                                    <p>First name*</p>
+                                                                    <input name="firstname" type="text">
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="single-form">
+                                                            <div class="firstname1 lastname2">
+                                                                <p>Last name*</p>
+                                                                <input name="lastname" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="description">
+                                                            <p>Biography</p>
+                                                            <textarea name="bio" cols="30" rows="10"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="first-name-lastname">
+                                                            <div class="firstname1">
+                                                                <p>Country*</p>
+                                                                <input name="country" type="text">
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="firstname1 lastname2">
+                                                            <p>City*</p>
+                                                            <input name="city" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side-buttone">
+                                        <button type="submit">Save</button>
+                                        <button type="button" class="discark1" data-toggle="modal" data-target="#editProfileModal">Discard</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- edit skills Modal -->
+<div class="modal fade" id="editSkillsModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body width1">
+                <div class="modalmain-form">
+                    <form id="editSkills">
+                        <div>
+                            <div class="all-name">
+                                <div class="det-form">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h5>Add or remove skills</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div>
+                                                    <p>New skill:</p>
+                                                    <input id="newSkill" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div>
+                                                    <p>your skills:</p>
+                                                    <div id="skillList">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-buttone">
+                            <button type="submit">Add</button>
+                            <button class="discark1">Discard</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- edit genres Modal -->
+<div class="modal fade" id="editGenresModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body width1">
+                <div class="modalmain-form">
+                    <form id="editGenres">
+                        <div>
+                            <div class="all-name">
+                                <div class="det-form">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h5>Add or remove Genres</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div>
+                                                    <p>New genre:</p>
+                                                    <input id="newGenre" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div>
+                                                    <p>your genres:</p>
+                                                    <div id="genreList">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-buttone">
+                            <button type="submit">Add</button>
+                            <button class="discark1">Discard</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN PAGE-->
+<div class="page2-blogcontent-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <div class="page2-blog-leftwrap">
+                    <div data-type="cover" class="page2-bluebg">
+                    </div>
+                    <div class="page2-author">
+                        <div class="page2-authorsa">
+                            <div class="authorist-j">
+                                <a>
+                                    <img data-type="photo" src="../assets/img/bel3.svg" alt="profile picture">
+                                </a>
+                            </div>
+                            <div id="userNameNBio">
+                                <label id="name">NickName</label>
+                                <p id="description">Description</p>
+                                <label id="userCity">Country </label><label>,</label><label id = "userCountry">city</label>
+                            </div>
+                            <a href="" data-toggle="modal" data-target="#editProfileModal" class="right2s">Edit
+                                profile</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="skil-wrap">
+                            <div class="skill-box mb-40">
+                                <p>Skills</p>
+                                <div class="skill-button">
+                                    <div id="skills">
+
+                                    </div>
+                                    <div class="right-button">
+                                        <button data-toggle="modal" data-target="#editSkillsModal" class="right2s">
+                                            Edit skills
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <p>Genres</p>
+                                <div class="skill-button">
+                                    <div id="genres">
+                                    </div>
+                                    <div class="right-button">
+                                        <button data-toggle="modal" data-target="#editGenresModal" class="right2s">
+                                            Edit
+                                            genres
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="video-wrap">
+                            <p>Projects</p>
+                            <div class="video-box">
+                                <p>Song Name</p>
+                                <div class="video-singleboxs">
+                                    <div class="video-imager-dish">
+                                        <div class="video-imager">
+                                            <img src="../../assets/img/video-image.svg" alt="">
+
+                                            <a class="popup-class"
+                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="star-t">
+                                        <span><i class="fa fa-star"></i>1.7K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-box">
+                                <p>Song Name</p>
+                                <div class="video-singleboxs">
+                                    <div class="video-imager-dish">
+                                        <div class="video-imager">
+                                            <img src="../../assets/img/video-image.svg" alt="">
+                                            <a class="popup-class"
+                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="star-t">
+                                        <span><i class="fa fa-star"></i>879</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-box">
+                                <p>Song Name</p>
+                                <div class="video-singleboxs">
+                                    <div class="video-imager-dish">
+                                        <div class="video-imager">
+                                            <img src="../../assets/img/video-image.svg" alt="">
+                                            <a class="popup-class"
+                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="star-t">
+                                        <span><i class="fa fa-star"></i>3.1K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-btn-e">
+                                <button>edit your project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="page2-blog-leftwrap2">
+                    <p>Following</p>
+                    <div class="rightpage2-content">
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page2-blog-leftwrap2 blogg2">
+                    <p>Followers</p>
+                    <div class="rightpage2-content">
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                        <div class="page2-author-22">
+                            <a href="">
+                                <img src="../../assets/img/author22.svg" alt="">
+                                <span>NickName</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,870 @@
+
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1449px) {
+
+
+
+
+
+
+}
+
+
+
+
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.headertop-menu ul li {
+	margin-right: 28px;
+}
+
+
+
+
+
+
+.page3-bigborder.sem1 {
+	width: 335px;
+	margin: 0 11px;
+}
+
+.page3-image1s.sem1.last-width1 {
+	width: 95px;
+}
+
+.page3-bigborder.sem1.last-width2 p {
+	font-size: 14px;
+}
+
+
+
+.page3-image1s.sem1.last-width1 {
+	width: 85px;
+}
+
+
+
+.page4-singlepopups-wrap {
+	padding-right: 142px;
+}
+
+
+
+
+
+
+.page3-buttonss.text-right.sem1.page5-file {
+	width: 290px;
+}
+
+
+
+
+
+
+
+
+
+.page6-tab1part a#v-pills-profile-tab img {
+  width: 19px;
+}
+
+
+.page6-tab1part a#v-pills-home-tab img {
+  width: 19px;
+}
+
+
+
+.page6-bigbo {
+	width: 200px;
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+.page6-tab1part #v-pills-tab a.active::after {
+	position: absolute;
+	right: -32px;
+	width: 0;
+	height: 0;
+	content: "";
+	top: 50%;
+	border-bottom: 37px solid transparent;
+	border-top: 31px solid transparent;
+	border-left: 32px solid;
+	transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page6-tab1part a#v-pills-home-tab.active span {
+	color: #A0A0A0;
+	font-size: 12px;
+}
+
+.page6-tab1part span {
+	display: block;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+
+.authorright ul img {
+	width: 55px;
+	margin: 0 3px;
+	margin-right: 0px;
+	width: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.headertop-author ul li {
+	padding-right: 5px;
+}
+
+.authorright {
+	margin-left: 0;
+}
+
+.headertop-menu ul li {
+	margin-right: 10px;
+}
+
+.headertop-menu a {
+	color: #A0A0A0;
+	font-size: 14px;
+	font-weight: 400;
+}
+.headertop-author img {
+	width: 17px;
+}
+
+span.name1 {
+	font-size: 12px;
+}
+
+.headertop-logo a {
+	font-size: 23px;
+}
+
+.headertop-logo {
+	text-align: left;
+}
+
+
+
+.blog-title p {
+	font-size: 14px;
+}
+
+.single-blog {
+	height: 127px;
+	width: 127px;
+}
+
+.single-blog.blog1 img {
+	width: 42px;
+}
+
+
+.single-blog-wrap p {
+	font-size: 12px;
+}
+
+.single-blog a {
+	font-size: 12px;
+}
+
+
+.single-blog-wraprr {
+	height: 127px;
+	width: 127px;
+	padding: 10px;
+}
+
+.single-blogol p {
+	font-size: 12px;
+}
+
+.single-blog-wraprr a {
+	font-size: 12px;
+}
+
+.single-blog.blog2 p {
+	padding: 10px;
+}
+
+.locke11 img {
+	width: 10px;
+}
+
+.video-box {
+	width: 98px;
+}
+
+.video-btn-e button {
+	font-size: 14px;
+	padding: 8px 8px;
+}
+a.right2s {
+	padding: 8px 12px;
+	font-size: 14px;
+}
+
+.right-button button {
+	font-size: 14px;
+	padding: 8px 12px;
+}
+
+.page2-author-22 span {
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+.page3-bigborder.sem1 {
+	width: 405px;
+	margin: 0 15px;
+}
+
+
+
+
+button.discark1 {
+	margin-top: 14px;
+}
+
+
+
+
+
+
+
+
+.colaborator-content-button {
+	padding: 12px;
+}
+
+.colaborator-content-button p {
+	font-size: 16px;
+}
+
+.page4-singlepopups-wrap {
+	padding-right: 0;
+}
+
+.page4-input form input {
+	width: 275px;
+}
+
+
+
+
+
+
+
+
+
+.page3-buttonss.text-right.sem1.page5-file {
+	width: 470px;
+	height: 64px;
+}
+
+.page3-bigborder.sem1.page5-bb {
+	width: 548px;
+	position: relative;
+	margin-left: 28px;
+}
+
+
+
+
+
+.page5-buttonsgroup span {
+	float: right;
+	background: #A210C6;
+	color: #fff;
+	padding: 2px 5px;
+	font-size: 12px;
+	font-weight: 400;
+	border-radius: 22px;
+	position: absolute;
+	right: 105px;
+	top: 8px;
+}
+
+
+
+
+
+
+
+
+.page6-bigbo {
+	width: 255px;
+	position: relative;
+}
+
+.page3-buttonss.text-right.sem1 {
+	display: flex;
+	align-items: end;
+	height: 71px;
+	width: 135px;
+	justify-content: end;
+}
+
+
+
+
+
+
+
+.page6-tab1part {
+	width: 92%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* SM Small Device :320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+
+.headertop-menu {
+	display: none;
+}
+
+.headertop-authorwrap {
+	text-align: center !important;
+	width: 100%;
+}
+
+.single-blog-wrap {
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.single-blog-wraprr {
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.blog-title {
+	text-align: center;
+}
+
+.colaboratioa {
+	text-align: center;
+	padding-bottom: 0;
+	padding-top: 24px;
+}
+
+
+
+
+a.right2s {
+	padding: 6px 8px;
+	font-size: 10px;
+}
+
+.skill-button button {
+	font-size: 10px;
+	padding: 6px 8px;
+}
+
+
+.video-box p {
+	font-size: 12px !important;
+}
+
+
+
+
+
+
+
+.video-wrap {
+	padding-left: 15px;
+}
+
+.video-imager img {
+	width: 100%;
+}
+
+.video-box {
+	float: none;
+	width: 100%;
+}
+
+.video-imager a {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.video-btn-e {
+	position: relative;
+	left: 0px;
+	bottom: 0;
+}
+
+.skil-wrap {
+	padding-left: 15px !important;
+}
+
+
+
+
+
+
+
+
+
+
+.select-box .nice-select {
+	margin-right: 3px;
+}
+
+.select-box span {
+	font-size: 11px;
+	font-weight: 400;
+}
+
+.dropdownee span {
+	font-size: 11px;
+}
+
+
+.dropdownee .nice-select {
+	padding-right: 48px;
+}
+
+
+.page3-bigborder.sem1.last-width2 p {
+	font-size: 11px;
+}
+
+.page3-buttonss.text-right.sem1 button {
+	font-size: 11px;
+	padding: 8px 6px;
+}
+
+
+.page3-bigborder.sem1 {
+	width: 218px;
+	padding-bottom: 0;
+	margin: 0 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sem1 {
+	width: 98px;
+}
+
+
+.page3-buttonss.text-right.sem1 span i {
+	font-size: 12px;
+}
+
+.page3-bigborder.sem1 p {
+	font-size: 11px;
+}
+
+.page3-bigborder.sem1.last-width2 {
+	width: 413px;
+	margin: 0;
+}
+
+.page3-image1s.sem1 a {
+	right: 15px;
+	bottom: 15px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+}
+
+
+
+
+
+
+.description textarea {
+	max-height: 62px;
+	width: 100%;
+}
+
+.firstname1 {
+	width: 100%;
+	margin-right: 0;
+}
+
+.firstname1 input {
+	width: 100%;
+}
+
+.firstname1.lastname2 {
+	width: 100%;
+	position: relative;
+	margin-right: 0;
+}
+
+
+
+
+
+
+.all-name {
+	width: 100%;
+}
+
+
+.side-buttone {
+	position: relative;
+	left: 15px;
+	bottom: 0;
+}
+.side-buttone button {
+	display: inline-block;
+}
+
+.modal-body {
+	width: 100%;
+}
+
+.all-name-wrap {
+	padding-bottom: 52px;
+}
+
+.nick-name input {
+	width: 100%;
+}
+
+
+
+
+
+
+
+.pic-projectr img {
+	max-width: 100%;
+}
+p.p-p {
+	font-size: 9px;
+}
+
+.project-pic span {
+	font-size: 10px;
+	line-height: 0;
+}
+
+
+
+
+
+.page4-singlepopups-wrap {
+	padding-right: 0;
+}
+
+
+
+
+
+.page3-buttonss.text-right.sem1.page5-file img {
+	width: 28px;
+}
+.page3-buttonss.text-right.sem1.page5-file label {
+	font-size: 11px;
+}
+
+.page3-buttonss.text-right.sem1.page5-file {
+	width: 210px;
+	height: 46px;
+}
+
+.page3-bigborder.sem1.page5-bb {
+	width: 157px;
+	position: relative;
+	padding: 0;
+}
+.page5-input input {
+	width: 180px;
+	padding: 3px 8px;
+}
+
+
+
+.page5-buttonsgroup button {
+	background: #08B508;
+	border: none;
+	color: #05281D;
+	font-size: 14px;
+	font-weight: 400;
+	width: 63px;
+	padding: 5px 19px;
+	border-radius: 8px;
+	text-align: left;
+	cursor: pointer;
+	margin-right: 3px;
+	position: relative;
+}
+
+.page5-buttonsgroup span {
+	float: right;
+	background: #A210C6;
+	color: #fff;
+	padding: 2px 5px;
+	font-size: 11px;
+	font-weight: 400;
+	border-radius: 22px;
+	position: absolute;
+	right: 0;
+	top: 4px;
+}
+
+.colaborator-content-button {
+	text-align: center;
+	padding: 15px;
+	margin-top: 32px;
+}
+
+
+
+
+.page5-collaboratorsauthor img {
+	width: 52px;
+}
+.page5-collaboratorsauthor {
+	text-align: center;
+	margin: 0 11px;
+}
+
+
+
+
+
+
+
+
+
+
+.page6-bigbo {
+	width: 142px;
+	position: relative;
+}
+
+.page6-nickk {
+	padding-left: 6px;
+	width: 120px;
+}
+
+.page6-nickk img {
+	width: 28px;
+}
+
+.page6-nickk span {
+	font-size: 12px;
+	font-weight: 400;
+	color: #A0A0A0;
+	line-height: 0;
+}
+
+.colaborator-content-button p {
+	color: #A0A0A0;
+	font-size: 24px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.page6-tab1part-wrap {
+	margin-top: 15px;
+}
+
+.page6-tab1part {
+	width: 89%;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* SM Small Device :576px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+
+.page3-buttonss.text-right.sem1 {
+	display: flex;
+	align-items: end;
+	height: 77px;
+	width: 180px;
+	justify-content: end;
+}
+
+
+
+.page3-bigborder.sem1 {
+	width: 479px;
+	padding-bottom: 0;
+	margin: 0 12px;
+}
+
+
+.page6-tab1part {
+	width: 93%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
