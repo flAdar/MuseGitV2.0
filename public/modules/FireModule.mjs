@@ -2,6 +2,9 @@ export default class FireModule {
     #USER;
     #EXPLORE_RESULT;
 
+    //Projects Vars
+    #PROJECTS = [];
+
 
     constructor() {
         var config = {
@@ -44,6 +47,11 @@ export default class FireModule {
 
     set explore_result(result){
         this.#EXPLORE_RESULT = result;
+    }
+
+    //Projects code
+    get projects(){
+        return this.#PROJECTS; 
     }
 
     signOut() {
@@ -139,6 +147,16 @@ export default class FireModule {
         }
     }
 
+    //Projects code
+    queryProjects(){
+        const projRef = Application.Modules.FireModule.db.collection('projects').where('AuthorID', "==", this.user.uid);
+        projRef.get().then((querySnapshot) => {
+            querySnapshot.forEach((doc)=>{
+                    this.#PROJECTS.push({data:doc.data()});
+
+            }); 
+    })
+    }
 
 }
 
