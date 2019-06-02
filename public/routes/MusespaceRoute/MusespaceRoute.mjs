@@ -12,7 +12,7 @@ export default class MusespaceRoute extends Component {
         this.#_project.onclick = ()=>{
             Application.Modules.RouterModule.redirect('/project');
         }
-       // Application.Modules.FireModule.queryProjects();
+      
 
     }
 
@@ -22,6 +22,7 @@ export default class MusespaceRoute extends Component {
             this.onUpdate('resProject', this.resProject,[this.creatResultProject])
         }
     }
+
     creatResultProject(){
         console.log(this.resProject);
         let _resProject = this.querySelector("#resProject");
@@ -31,7 +32,7 @@ export default class MusespaceRoute extends Component {
                 private: res['data'].Private,
             };
             console.log(project);
-            const setResPro = document.createElement("res_Project");
+            const setResPro = document.createElement("project-result");
             setResPro.setAttribute("porjectDisplay",project.name );
             setResPro.setAttribute("access", project.private);
             _resProject.appendChild(setResPro);

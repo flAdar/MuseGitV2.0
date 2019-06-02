@@ -6,7 +6,8 @@ export default class ProjectDisplayComponent extends Component {
     }
     onInit(){
 
-        //this.querySelector(".p-name").innerText=this.getAttribute('name');
+        this.querySelector(".p-name").innerText=this.getAttribute('porjectDisplay');
+        this.querySelector(".access").innerText=this.getAttribute('accsess');
        
     }
     onSync(){

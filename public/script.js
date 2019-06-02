@@ -5,6 +5,7 @@ import FireModule from "./modules/FireModule.mjs";
 import {FormsModule} from "./modules/FormsModule.mjs";
 import ArtistComponent from "./components/ArtistComponent/ArtistComponent.mjs";
 import ProjectComponent from "./components/ProjectComponent/ProjectComponent.mjs";
+import ProjectDisplayComponent from "./components/ProjectDisplayComponent/ProjectDisplayComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
@@ -39,6 +40,11 @@ window['Application'] = new class Application {
             {
                 selector:'explore-project',
                 component:ProjectComponent
+            }
+            ,
+            {
+                selector:'project-result',
+                component:ProjectDisplayComponent
             }
 
         ];
