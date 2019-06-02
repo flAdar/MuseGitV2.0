@@ -13,6 +13,7 @@ import ProfileRoute from "../routes/ProfileRoute/ProfileRoute.mjs";
 import ProjectRoute from "../routes/ProjectRoute/ProjectRoute.mjs";
 import SupportRoute from "../routes/SupportRoute/SupportRoute.mjs";
 import VersionsRoute from "../routes/VersionsRoute/VersionsRoute.mjs";
+import VisitProfileRoute from "../routes/VisitProfileRoute/VisitProfileRoute.mjs";
 
 export default class RouterModule {
     #Routes = [];
@@ -75,6 +76,7 @@ export default class RouterModule {
                 path:'/profile',
                 selector:'app-profile',
                 component:ProfileRoute,
+                query:false
             },
             {
                 path:'/project',
@@ -90,6 +92,12 @@ export default class RouterModule {
                 path:'/versions',
                 selector:'app-versions',
                 component:VersionsRoute,
+            },
+            {
+                path:'/visitProfile',
+                selector:'app-visitprofile',
+                component:VisitProfileRoute,
+                query:true
             },
             {
                 path:'**',
@@ -142,15 +150,18 @@ export default class RouterModule {
     }
 
     // On page load it will loop over "#Routes" to fined what route user use
-    redirect(pathname = location.pathname){
+    redirect(pathname = location.pathname,search=undefined){
         if(pathname !== location.pathname){
-            window.history.pushState('','',pathname);
+            if(!search)search="";
+            else search = `?${search}`;
+            window.history.pushState('','',`${pathname}${search}`);
         }
         // check if already defined
         // When "router-outlet" defined from document
         if(this.#RouterComponent){
             for(let route of this.#Routes){
-                if(pathname === route.path){
+                if(pathname === route.path ){
+                    // if(search && route.query && location.search){}
                     return this.#RouterComponent.route = route.selector
                 }
                 if(route.path === '**'){

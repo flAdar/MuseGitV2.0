@@ -1,6 +1,7 @@
 export default class FireModule {
     #USER;
     #EXPLORE_RESULT;
+    #A_USER;
 
 
     constructor() {
@@ -41,6 +42,9 @@ export default class FireModule {
         return this.#EXPLORE_RESULT;
     }
 
+    get a_user(){
+        return this.#A_USER;
+    }
 
     set explore_result(result){
         this.#EXPLORE_RESULT = result;
@@ -137,6 +141,53 @@ export default class FireModule {
                 });
         })
         }
+    }
+
+    follow(uid){
+        this.db.collection("following").doc(`on_${uid}_by_${this.user.uid}`)
+            .set({
+                followOn: {
+                    userID: uid,
+                    NickName: '',
+                    imgURL: ''
+                },
+                followedBy: {
+                    userID: this.user.uid,
+                    NickName: '',
+                    imgURL: ''
+                }
+            })
+            .then(function () {
+                alert(" Follow succeeded ");
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
+    }
+
+    joinProjectRequest(pid){
+        return this.db.collection("collaboration").doc(`${this.user.uid}_${pid}`)
+            .set({
+                user: {
+                    userID: this.user.uid,
+                    NickName: '',
+                    imgURL: ''
+                },
+                project: {
+                    projectID: pid,
+                    projectName: '',
+                    imgURL: '',
+                    fullTrackURL: ''
+                },
+                status: "pending"
+            })
+    }
+
+    queryUser(uid){
+        console.log(uid);
+        this.db.collection('user').doc(uid).get().then(doc=>{
+            this.#A_USER = doc.data();
+        })
     }
 
 
