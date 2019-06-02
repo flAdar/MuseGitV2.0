@@ -23,22 +23,25 @@ export default class MusespaceRoute extends Component {
         }
     }
 
+
     creatResultProject(){
         console.log(this.resProject);
         let _resProject = this.querySelector("#resProject");
         for(let res of this.resProject){
-            if(res['data'].Private == true){
-                
-            }
             let project = {
                 name: res['data'].PName,
-               
-                private: res['data'].Private,
+                private: res['data'].Private
             };
             console.log(project);
             const setResPro = document.createElement("project-result");
+
+            if(project.private == true){
+                setResPro.setAttribute("access", 'private');
+
+            }else{
+                setResPro.setAttribute("access", 'public');
+            }
             setResPro.setAttribute("porjectDisplay",project.name );
-            setResPro.setAttribute("access", project.private);
             _resProject.appendChild(setResPro);
         }
 
