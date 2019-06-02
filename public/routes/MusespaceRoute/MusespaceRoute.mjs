@@ -27,8 +27,12 @@ export default class MusespaceRoute extends Component {
         console.log(this.resProject);
         let _resProject = this.querySelector("#resProject");
         for(let res of this.resProject){
+            if(res['data'].Private == true){
+                
+            }
             let project = {
                 name: res['data'].PName,
+               
                 private: res['data'].Private,
             };
             console.log(project);
