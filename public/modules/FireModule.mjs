@@ -29,7 +29,13 @@ export default class FireModule {
         return (user) => {
             if (user) {
                 this.db.collection("users").doc(user.uid).onSnapshot((doc) => {
-                    this.#USER = doc.data()
+                    this.#USER = doc.data();
+                    this.db.collection('projects').where('AuthorID', "==", doc.id)
+                        .get().then((querySnapshot) => {
+                        querySnapshot.forEach((pro_doc) => {
+                            this.#PROJECTS.push({data: pro_doc.data()});
+                        });
+                    })
                 })
             } else {
 
@@ -45,17 +51,17 @@ export default class FireModule {
         return this.#EXPLORE_RESULT;
     }
 
-    get a_user(){
+    get a_user() {
         return this.#A_USER;
     }
 
-    set explore_result(result){
+    set explore_result(result) {
         this.#EXPLORE_RESULT = result;
     }
 
     //Projects code
-    get projects(){
-        return this.#PROJECTS; 
+    get projects() {
+        return this.#PROJECTS;
     }
 
     signOut() {
@@ -135,8 +141,12 @@ export default class FireModule {
             const projectRef = this.db.collection('projects').where('Private', '==', false).get();
             projectRef.then((querySnapshot) => {
                 querySnapshot.forEach(doc => {
-                    this.db.collection('users').doc(doc.data()['AuthorID']).get().then((user)=>{
-                        this.#EXPLORE_RESULT.push({type:'project', data:doc.data(),author:user.data()['displayName']});
+                    this.db.collection('users').doc(doc.data()['AuthorID']).get().then((user) => {
+                        this.#EXPLORE_RESULT.push({
+                            type: 'project',
+                            data: doc.data(),
+                            author: user.data()['displayName']
+                        });
                     })
                 });
 
@@ -144,14 +154,14 @@ export default class FireModule {
         } else if (filters['type'] === 'artist') {
             const userRef = this.db.collection('users');
             userRef.get().then((querySnapshot) => {
-                querySnapshot.forEach((doc)=>{
-                    this.#EXPLORE_RESULT.push({type:'artist', data:doc.data()});
+                querySnapshot.forEach((doc) => {
+                    this.#EXPLORE_RESULT.push({type: 'artist', data: doc.data()});
                 });
-        })
+            })
         }
     }
-    
-    follow(uid){
+
+    follow(uid) {
         this.db.collection("following").doc(`on_${uid}_by_${this.user.uid}`)
             .set({
                 followOn: {
@@ -173,7 +183,7 @@ export default class FireModule {
             });
     }
 
-    joinProjectRequest(pid){
+    joinProjectRequest(pid) {
         return this.db.collection("collaboration").doc(`${this.user.uid}_${pid}`)
             .set({
                 user: {
@@ -191,24 +201,13 @@ export default class FireModule {
             })
     }
 
-    queryUser(uid){
+    queryUser(uid) {
         console.log(uid);
-        this.db.collection('user').doc(uid).get().then(doc=>{
+        this.db.collection('user').doc(uid).get().then(doc => {
             this.#A_USER = doc.data();
         })
     }
 
-
-    //Projects code
-    queryProjects(){
-        const projRef = Application.Modules.FireModule.db.collection('projects').where('AuthorID', "==", this.user.uid);
-        projRef.get().then((querySnapshot) => {
-            querySnapshot.forEach((doc)=>{
-                    this.#PROJECTS.push({data:doc.data()});
-
-            }); 
-    })
-    }
 
 
 }
