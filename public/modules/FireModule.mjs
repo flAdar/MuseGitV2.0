@@ -202,8 +202,7 @@ export default class FireModule {
     }
 
     queryUser(uid) {
-        console.log(uid);
-        this.db.collection('user').doc(uid).get().then(doc => {
+        this.db.collection('users').doc(uid).get().then(doc => {
             this.#A_USER = doc.data();
         })
     }
