@@ -3,7 +3,8 @@ import RouterModule from "./modules/RouterModule.mjs";
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.mjs";
 import FireModule from "./modules/FireModule.mjs";
 import {FormsModule} from "./modules/FormsModule.mjs";
-import artistResult from "./components/artistResult/artistResult.mjs";
+import ArtistComponent from "./components/ArtistComponent/ArtistComponent.mjs";
+import ProjectComponent from "./components/ProjectComponent/ProjectComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
@@ -28,12 +29,16 @@ window['Application'] = new class Application {
                 component:AppComponent
             },
             {
-                selector:'app-artist',
-                component:artistResult
-            },
-            {
                 selector:'app-header',
                 component:HeaderComponent
+            },
+            {
+                selector:'explore-artist',
+                component:ArtistComponent
+            },
+            {
+                selector:'explore-project',
+                component:ProjectComponent
             }
 
         ];

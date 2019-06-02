@@ -2,6 +2,7 @@ export default class FireModule {
     #USER;
     #EXPLORE_RESULT;
 
+
     constructor() {
         var config = {
             apiKey: "AIzaSyD0IixJ3b0kZtyfzD75iOQAlgL2RwBUdoU",
@@ -38,6 +39,11 @@ export default class FireModule {
 
     get explore_result() {
         return this.#EXPLORE_RESULT;
+    }
+
+
+    set explore_result(result){
+        this.#EXPLORE_RESULT = result;
     }
 
     signOut() {
@@ -117,9 +123,9 @@ export default class FireModule {
             const projectRef = this.db.collection('projects').where('Private', '==', false).get();
             projectRef.then((querySnapshot) => {
                 querySnapshot.forEach(doc => {
-                    this.#EXPLORE_RESULT.push({type:'project', data:doc.data()});
-
-
+                    this.db.collection('users').doc(doc.data()['AuthorID']).get().then((user)=>{
+                        this.#EXPLORE_RESULT.push({type:'project', data:doc.data(),author:user.data()['displayName']});
+                    })
                 });
 
             })
@@ -132,6 +138,7 @@ export default class FireModule {
         })
         }
     }
+
 
 }
 

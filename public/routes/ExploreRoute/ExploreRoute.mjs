@@ -11,6 +11,10 @@ export default class ExploreRoute extends Component {
         this._exploreForm.addEventListener('submit', (event) => {
             event.preventDefault();
             const form = event.target;
+            let _exploreResult = this.querySelector("#exploreResult");
+            while(_exploreResult.firstChild){
+                _exploreResult.removeChild(_exploreResult.firstChild)
+            }
             const result = this.exploreFormHandler(form);
             console.log(result);
             Application.Modules.FireModule.queryFilters(result);
@@ -20,11 +24,8 @@ export default class ExploreRoute extends Component {
 
     onSync() {
         this.explore_result = Application.Modules.FireModule.explore_result;
-        if (this.explore_result){
-            if (this.explore_result.length>0){
-                this.onUpdate('explore_result', this.explore_result,[this.creatResult])
-
-            }
+        if (this.explore_result && this.explore_result.length>0){
+            this.onUpdate('explore_result', this.explore_result,[this.creatResult])
         }
     }
 
@@ -43,7 +44,7 @@ export default class ExploreRoute extends Component {
     }
 
     creatResult() {
-        let _exploreResult = this.querySelector("#exploreResultUser");
+        let _exploreResult = this.querySelector("#exploreResult");
         console.log(this.explore_result);
         for(let res of this.explore_result){
             if (res['type'] === "artist") {
@@ -53,50 +54,31 @@ export default class ExploreRoute extends Component {
                     bio: res['data'].Bio
                 };
                 console.log(artist);
-                // const searchResult = document.createElement("div");
-                // searchResult.setAttribute("component-artistResult", '');
-                // searchResult.setAttribute("class", "artist");
-                // searchResult.setAttribute("uid", artist.uid);
-                // searchResult.setAttribute("name", artist.name);
-                // searchResult.setAttribute("bio", artist.bio);
-                // const searchResult = document.createElement("app-artist");
-                // _exploreResult.appendChild(searchResult);
+                const searchResult = document.createElement("explore-artist");
+                searchResult.setAttribute("uid", artist.uid);
+                searchResult.setAttribute("name", artist.name);
+                searchResult.setAttribute("bio", artist.bio);
+                _exploreResult.appendChild(searchResult);
+
+            }
+            else if (res['type'] === "project") {
+                    let project = {
+                        pid: res['data'].pid,
+                        name: res['data'].PName,
+                        author: res['author'],
+                        stars: res['data'].Stars
+                    };
+                console.log(project);
+                const searchResult = document.createElement("explore-project");
+                searchResult.setAttribute("pid", project.pid);
+                searchResult.setAttribute("name", project.name);
+                searchResult.setAttribute("author", project.author);
+                searchResult.setAttribute("stars", project.stars);
+                _exploreResult.appendChild(searchResult);
 
             }
         }
-
-        //console.log(this.explore_result);
-        // let exploreResult = document.getElementById("exploreResult");
-        // if (type === 'artist') {
-        //     let artist = {
-        //         uid: doc.id,
-        //         name: doc.data()['displayName'],
-        //         bio: doc.data()['Bio']
-        //     };
-        //     const searchResult = document.createElement("div");
-        //     searchResult.setAttribute("component-artistResult", '');
-        //     searchResult.setAttribute("class", "artist");
-        //     searchResult.setAttribute("uid", artist.uid);
-        //     searchResult.setAttribute("name", artist.name);
-        //     searchResult.setAttribute("bio", artist.bio);
-        //     exploreResult.appendChild(searchResult);
-        //
-        // } else if (type === 'project') {
-        //     let project = {
-        //         pid: doc.id,
-        //         name: doc.data()['PName'],
-        //         author: doc.data()['AuthorID'],
-        //         stars: doc.data()['Stars']
-        //     };
-        //     const searchResult = document.createElement("div");
-        //     searchResult.setAttribute("class", "project");
-        //     searchResult.setAttribute("component-projectResult", '');
-        //     searchResult.setAttribute("pid", project.pid);
-        //     searchResult.setAttribute("name", project.name);
-        //     searchResult.setAttribute("author", project.author);
-        //     searchResult.setAttribute("stars", project.stars);
-        //     exploreResult.appendChild(searchResult);
-        // }
+        Application.Modules.FireModule.explore_result = [];
     }
 
 }

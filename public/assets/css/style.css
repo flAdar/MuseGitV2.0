@@ -54,14 +54,14 @@ form input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
 
 
 
-@font-face {
-    font-family:Avenirbold;
-    src: url(../fonts/AvenirNextLTPro-Bold.otf);
-}
-@font-face {
-    font-family:Avenirregular;
-    src: url(../fonts/AvenirNextLTPro-Regular.otf);
-}
+/*@font-face {*/
+/*    font-family:Avenirbold;*/
+/*    src: url(../fonts/AvenirNextLTPro-Bold.otf);*/
+/*}*/
+/*@font-face {*/
+/*    font-family:Avenirregular;*/
+/*    src: url(../fonts/AvenirNextLTPro-Regular.otf);*/
+/*}*/
 
 
 
@@ -576,7 +576,7 @@ button.c-3 {
 }
 
 .page3-bigborder.sem1 span.gra1 {
-  background: background: #e8c1eb;
+  background: #e8c1eb;
   background: -moz-linear-gradient(left, #e8c1eb 0%, #972f94 100%);
   background: -webkit-linear-gradient(left, #e8c1eb 0%,#972f94 100%);
   background: linear-gradient(to right, #e8c1eb 0%,#972f94 100%);
@@ -1201,7 +1201,7 @@ button.discark1 {
 .page3-bigborder.sem1.page5-bb span {
   height: 4px;
   width: 100%;
-  background: background: #e8c1eb;
+  background: #e8c1eb;
   background: -moz-linear-gradient(left, #e8c1eb 0%, #972f94 100%);
   background: -webkit-linear-gradient(left, #e8c1eb 0%,#972f94 100%);
   background: linear-gradient(to right, #e8c1eb 0%,#972f94 100%);
@@ -1589,7 +1589,7 @@ button.rock2 i {
 
 
 .page6-bigbo span {
-  background: background: #e8c1eb;
+  background: #e8c1eb;
   background: -moz-linear-gradient(left, #e8c1eb 0%, #972f94 100%);
   background: -webkit-linear-gradient(left, #e8c1eb 0%,#972f94 100%);
   background: linear-gradient(to right, #e8c1eb 0%,#972f94 100%);
