@@ -2,6 +2,7 @@ export default class FireModule {
     #USER;
     #EXPLORE_RESULT;
     #A_USER;
+    #A_PROJECT;
 
     //Projects Vars
     #PROJECTS = [];
@@ -53,6 +54,10 @@ export default class FireModule {
 
     get a_user() {
         return this.#A_USER;
+    }
+
+    get a_project(){
+        return this.#A_PROJECT;
     }
 
     set explore_result(result) {
@@ -204,6 +209,12 @@ export default class FireModule {
     queryUser(uid) {
         this.db.collection('users').doc(uid).get().then(doc => {
             this.#A_USER = doc.data();
+        })
+    }
+
+    queryProject(pid){
+        this.db.collection('projects').doc(pid).get().then(doc=>{
+            this.#A_PROJECT = doc.data();
         })
     }
 
