@@ -4,7 +4,7 @@ export default class ProfileRoute extends Component {
     #userInfo;
     #_updateProfileForm;
     #user;
-    #userState;
+    #follow;
     constructor(){
         super();
     }
@@ -26,7 +26,13 @@ export default class ProfileRoute extends Component {
     }
     onSync(){
         this.#user = Application.Modules.FireModule.user;
+        this.#follow = Application.Modules.FireModule.follow;
         this.onUpdate('user',this.#user,[this.renderProfile,this.renderProfileForm]);
+        if(this.#follow && this.#follow.length>0){
+            this.onUpdate('follow',this.#follow,[this.renderFollow]);
+        }
+
+
     }
 
     renderProfile(){
@@ -34,6 +40,8 @@ export default class ProfileRoute extends Component {
         this.#userInfo.bio.innerHTML = this.#user.Bio;
         this.#userInfo.county.innerHTML = this.#user.Country;
         this.#userInfo.city.innerHTML = this.#user.City;
+        this.#userInfo.cover.src = `../assets/cover/${this.#user.CoverURL}.jpg`;
+        this.#userInfo.img.src = `../assets/PNG/128x128/128_${this.#user.photoURL}.png`;
         const skills = this.querySelector('#skills');
         const genres = this.querySelector('#genres');
         if(skills.children.length !== this.#user.Skills.length){
@@ -63,24 +71,25 @@ export default class ProfileRoute extends Component {
         // this.coverURL();
         // this.photoURL();
     }
-    // // Define cover url and if it's not exist then leave it as it is
-    // coverURL(){
-    //     if (this.user.coverURL) {
-    //         const covers = document.querySelectorAll('[data-type="cover"]');
-    //         for (let cover of covers) {
-    //             cover.style = `background-image: url("${this.user.coverURL}")`;
-    //         }
-    //     }
-    // }
-    // // Define photo url and if it's not exist then leave it as it is
-    // photoURL() {
-    //     if (this.user.photoURL) {
-    //         const _photoURLs = document.querySelectorAll('[data-type="photo"]');
-    //         for (let _photoURL of _photoURLs) {
-    //             _photoURL.classList.add('photoURL');
-    //             _photoURL.src = this.user.photoURL;
-    //         }
-    //     }
-    // }
+    renderFollow(){
+        console.log(this.#follow);
+        let _followers = this.querySelector('#followers');
+        let _followings = this.querySelector('#followings');
+        this.#follow.forEach((fol)=>{
+            let _follow = document.createElement('follow-user');
+            _follow.setAttribute('uid',fol['data'].uid);
+            _follow.setAttribute('name',fol['data'].displayName);
+            _follow.setAttribute('img',fol['data'].photoURL);
+            if(fol['type']==='follower'){
+                _followers.appendChild(_follow);
+            }
+            else if(fol['type']==='following'){
+                _followings.appendChild(_follow);
+            }
+
+        })
+
+    }
+
 
 }

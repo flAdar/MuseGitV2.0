@@ -23,6 +23,6 @@ export default class ArtistComponent extends Component {
 
     follow(uid) {
         console.log(uid);
-        Application.Modules.FireModule.follow(uid);
+        Application.Modules.FireModule.followUser(uid);
     }
 }

@@ -3,6 +3,7 @@ export default class FireModule {
     #EXPLORE_RESULT;
     #A_USER;
     #A_PROJECT;
+    #FOLLOW=[];
 
     //Projects Vars
     #PROJECTS = [];
@@ -36,7 +37,27 @@ export default class FireModule {
                         querySnapshot.forEach((pro_doc) => {
                             this.#PROJECTS.push({data: pro_doc.data()});
                         });
-                    })
+                    });
+                    this.db.collection('following').where('followOn.userID','==',doc.id)
+                        .get().then((querySnapshot)=>{
+                        querySnapshot.forEach((fol_doc) => {
+                            let followedBy = fol_doc.id.split('_')[3];
+                            console.log(followedBy)
+                            this.db.collection('users').doc(followedBy).get().then((user)=>{
+                                this.#FOLLOW.push({type:"follower",data: user.data()});
+                            })
+                        });
+                    });
+                    this.db.collection('following').where('followedBy.userID','==',doc.id)
+                        .get().then((querySnapshot)=>{
+                        querySnapshot.forEach((fol_doc) => {
+                            let followOn = fol_doc.id.split('_')[1];
+                            console.log(followOn);
+                            this.db.collection('users').doc(followOn).get().then((user)=>{
+                                this.#FOLLOW.push({type:"following",data: user.data()});
+                            })
+                        });
+                    });
                 })
             } else {
 
@@ -58,6 +79,10 @@ export default class FireModule {
 
     get a_project(){
         return this.#A_PROJECT;
+    }
+
+    get follow(){
+        return this.#FOLLOW;
     }
 
     set explore_result(result) {
@@ -90,6 +115,8 @@ export default class FireModule {
                     displayName: result.email.split('@')[0]
                 })
                     .then(() => {
+                        let random =Math.floor(Math.random() * (+17 - +1)) + +1;
+
                         return this.db.collection("users").doc(credential.user.uid)
                             .set({
                                 uid: credential.user.uid,
@@ -101,8 +128,8 @@ export default class FireModule {
                                 City: "",
                                 Genres: [],
                                 Skills: [],
-                                photoURL: "",
-                                coverURL: "",
+                                photoURL: random,
+                                CoverURL: random,
                                 Projects: [],
                                 Follower: [],
                                 Following: [],
@@ -166,7 +193,7 @@ export default class FireModule {
         }
     }
 
-    follow(uid) {
+    followUser(uid) {
         this.db.collection("following").doc(`on_${uid}_by_${this.user.uid}`)
             .set({
                 followOn: {

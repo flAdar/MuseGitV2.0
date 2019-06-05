@@ -7,6 +7,7 @@ import ArtistComponent from "./components/ArtistComponent/ArtistComponent.mjs";
 import ProjectComponent from "./components/ProjectComponent/ProjectComponent.mjs";
 import ProjectDisplayComponent from "./components/ProjectDisplayComponent/ProjectDisplayComponent.mjs";
 import AudioPlayerComponent from "./components/AudioPlayerComponent/AudioPlayerComponent.mjs";
+import FollowerComponent from "./components/FollowerComponent/FollowerComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
@@ -51,6 +52,10 @@ window['Application'] = new class Application {
             {
                 selector:'audio-player',
                 component: AudioPlayerComponent
+            },
+            {
+                selector:'follow-user',
+                component: FollowerComponent
             }
 
         ];

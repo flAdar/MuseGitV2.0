@@ -42,12 +42,13 @@
                 <div class="dropdown">
                     <button class="btn" type="button" id="loggedDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <label data-type="profile-thumbnail">
-                            <img src="../../assets/img/bel3.svg">
+                            <img id ="avatar" src="../../assets/img/bel3.svg">
                             <span id="displayName">displayName</span>
                         </label>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="loggedDropdown">
                         <a class="dropdown-item" routerLink="/profile" >Profile</a>
+                        <a class="dropdown-item" routerLink="/profile" >Favorites</a>
                         <a class="dropdown-item" id="signout">Logout</a>
                     </div>
                 </div>
