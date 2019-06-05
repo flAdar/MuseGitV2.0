@@ -6,6 +6,7 @@ import {FormsModule} from "./modules/FormsModule.mjs";
 import ArtistComponent from "./components/ArtistComponent/ArtistComponent.mjs";
 import ProjectComponent from "./components/ProjectComponent/ProjectComponent.mjs";
 import ProjectDisplayComponent from "./components/ProjectDisplayComponent/ProjectDisplayComponent.mjs";
+import AudioPlayerComponent from "./components/AudioPlayerComponent/AudioPlayerComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
@@ -45,6 +46,11 @@ window['Application'] = new class Application {
             {
                 selector:'project-result',
                 component:ProjectDisplayComponent
+            }
+            ,
+            {
+                selector:'audio-player',
+                component: AudioPlayerComponent
             }
 
         ];

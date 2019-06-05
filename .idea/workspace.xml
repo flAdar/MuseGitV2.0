@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a473ce22-e1bf-41c6-b683-ad576b985c9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.mjs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.css" afterDir="false" />
@@ -23,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,47 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.mjs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="14" column="66" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/modules/FireModule.mjs">
+        <entry file="file://$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-              <folding>
-                <element signature="n#!!block;n#constructor#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#defineUser#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#user#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#explore_result#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#a_user#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#a_project#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#explore_result#1;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#projects#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#signOut#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#RegisterEmailAndPassword#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#loginEmailAndPassword#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#queryFilters#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#follow#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#joinProjectRequest#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#queryUser#0;n#FireModule#0;n#!!top" />
-                <element signature="n#!!block;n#queryProject#0;n#FireModule#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="93">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -98,6 +66,9 @@
       <find>set</find>
       <find>Declarations</find>
       <find>page3-popups-wrap</find>
+      <find>a_project</find>
+      <find>popup-class</find>
+      <find>.page3-image1s.sem1 a</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,9 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/pages/home/home.js" />
-        <option value="$PROJECT_DIR$/public/components/header/header.css" />
-        <option value="$PROJECT_DIR$/public/pages/register/register.html" />
         <option value="$PROJECT_DIR$/public/modules/FormsModule.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/pages/login/login.html" />
@@ -138,11 +106,8 @@
         <option value="$PROJECT_DIR$/public/routes/CollaboratorsRoute/CollaboratorsRoute.mjs" />
         <option value="$PROJECT_DIR$/public/components/artistResult/artistResult.js" />
         <option value="$PROJECT_DIR$/public/components/AppComponent/AppComponent.html" />
-        <option value="$PROJECT_DIR$/public/script.js" />
-        <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.css" />
         <option value="$PROJECT_DIR$/public/routes/ExploreRoute/ExploreRoute.mjs" />
-        <option value="$PROJECT_DIR$/public/routes/ExploreRoute/ExploreRoute.html" />
         <option value="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.html" />
         <option value="$PROJECT_DIR$/public/components/ArtistComponent/ArtistComponent.html" />
         <option value="$PROJECT_DIR$/public/components/ArtistComponent/ArtistComponent.mjs" />
@@ -152,15 +117,21 @@
         <option value="$PROJECT_DIR$/public/routes/VisitProfileRoute/VisitProfileRoute.mjs" />
         <option value="$PROJECT_DIR$/public/routes/VisirProjectRoute/VisirProjectRoute.html" />
         <option value="$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.mjs" />
-        <option value="$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.html" />
         <option value="$PROJECT_DIR$/public/modules/RouterModule.mjs" />
         <option value="$PROJECT_DIR$/public/routes/VisirProjectRoute/VisirProjectRoute.mjs" />
         <option value="$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.html" />
         <option value="$PROJECT_DIR$/public/modules/FireModule.mjs" />
+        <option value="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.html" />
+        <option value="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.mjs" />
+        <option value="$PROJECT_DIR$/public/script.js" />
+        <option value="$PROJECT_DIR$/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.css" />
+        <option value="$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.html" />
+        <option value="$PROJECT_DIR$/public/routes/ExploreRoute/ExploreRoute.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-6" />
     <option name="width" value="642" />
     <option name="height" value="524" />
@@ -187,18 +158,18 @@
               <item name="MuseGitV2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseGitV2.0" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseGitV2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseGitV2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseGitV2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseGitV2.0" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseGitV2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseGitV2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,7 +177,7 @@
               <item name="MuseGitV2.0" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="VisitProjectRoute" type="462c0819:PsiDirectoryNode" />
+              <item name="ExploreRoute" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,15 +230,15 @@
       <workItem from="1558778468100" duration="50291000" />
       <workItem from="1559224090713" duration="14895000" />
       <workItem from="1559322470938" duration="209000" />
-      <workItem from="1559324136857" duration="41875000" />
+      <workItem from="1559324136857" duration="45232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156539000" />
+    <option name="totallyTimeSpent" value="159896000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -293,17 +264,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/components/projectResult/projectResult.html" />
-    <entry file="file://$PROJECT_DIR$/public/components/header/header.html" />
-    <entry file="file://$PROJECT_DIR$/public/modules/FireModule.js" />
-    <entry file="file://$PROJECT_DIR$/public/pages/profile/profile.js" />
-    <entry file="file://$PROJECT_DIR$/public/components/projectResult/projectResult.js" />
-    <entry file="file://$PROJECT_DIR$/public/pages/project/project.js" />
-    <entry file="file://$PROJECT_DIR$/public/modules/RouterModule.js" />
-    <entry file="file://$PROJECT_DIR$/public/core.js" />
-    <entry file="file://D:/הגשות פרויקט גמר/פוסטר חדש.css" />
-    <entry file="file://$PROJECT_DIR$/public/pages/explore/explore.js" />
-    <entry file="file://$PROJECT_DIR$/public1/pages/project/project.js" />
     <entry file="file://$PROJECT_DIR$/public/routes/VersionsRoute/VersionsRoute.mjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -378,24 +338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="1591" column="13" selection-start-line="1591" selection-start-column="13" selection-end-line="1591" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/routes/ExploreRoute/ExploreRoute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1297">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -474,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/ArtistComponent/ArtistComponent.mjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.mjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -502,38 +441,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/modules/RouterModule.mjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2201">
           <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.mjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="66" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -559,6 +470,114 @@
             <element signature="n#!!block;n#queryUser#0;n#FireModule#0;n#!!top" />
             <element signature="n#!!block;n#queryProject#0;n#FireModule#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.mjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/routes/VisitProjectRoute/VisitProjectRoute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.mjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/ArtistComponent/ArtistComponent.mjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="8" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/meanmenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/nice-select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/owl.carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="628" column="29" selection-start-line="628" selection-start-column="29" selection-end-line="628" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/routes/ExploreRoute/ExploreRoute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1673">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/AudioPlayerComponent/AudioPlayerComponent.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/ProjectComponent/ProjectComponent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
