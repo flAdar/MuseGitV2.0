@@ -11,6 +11,8 @@ export default class ProjectDisplayComponent extends Component {
         if(this.getAttribute('access')==='public'){
             $('.icon').html("lock_open");
         }
+
+
        
     }
     onSync(){

@@ -32,17 +32,18 @@ export default class MusespaceRoute extends Component {
                 name: res['data'].PName,
                 private: res['data'].Private
             };
-            console.log(project);
             const setResPro = document.createElement("project-result");
 
             if(project.private == true){
-                setResPro.setAttribute("access", 'private');
+                setResPro.setAttribute("status", 'private');
 
             }else{
-                setResPro.setAttribute("access", 'public');
+                setResPro.setAttribute("status", 'public');
             }
             setResPro.setAttribute("porjectDisplay",project.name );
             _resProject.appendChild(setResPro);
+            console.log(project);
+
         }
 
     }
