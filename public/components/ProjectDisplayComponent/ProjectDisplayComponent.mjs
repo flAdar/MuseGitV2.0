@@ -5,7 +5,7 @@ export default class ProjectDisplayComponent extends Component {
         super();
     }
     onInit(){
-
+        let _pid = this.getAttribute('pid');
         this.querySelector(".p-name").innerText=this.getAttribute('porjectDisplay');
         this.querySelector(".access").innerText=this.getAttribute('access');
         if(this.getAttribute('access')==='public'){
@@ -15,6 +15,12 @@ export default class ProjectDisplayComponent extends Component {
         if(this.getAttribute('access')==='private'){
             $('.icon').html("lock");
         }
+        this.querySelector(".enter").addEventListener('click',(event)=>{
+            Application.Modules.RouterModule.redirect(`/project`,_pid);
+        })
+        
+
+       
     }
     onSync(){
 

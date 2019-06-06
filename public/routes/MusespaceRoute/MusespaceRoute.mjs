@@ -30,7 +30,8 @@ export default class MusespaceRoute extends Component {
         for(let res of this.resProject){
             let project = {
                 name: res['data'].PName,
-                private: res['data'].Private
+                private: res['data'].Private,
+                pid: res['data'].pid
             };
             const setResPro = document.createElement("project-result");
 
@@ -41,6 +42,7 @@ export default class MusespaceRoute extends Component {
                 setResPro.setAttribute("access", 'public');
             }
             setResPro.setAttribute("porjectDisplay",project.name );
+            setResPro.setAttribute('pid',project.pid);
             _resProject.appendChild(setResPro);
             console.log(project);
 
