@@ -73,6 +73,8 @@ export default class ProfileRoute extends Component {
         this.#_updateProfileForm.bio.value = this.#user.Bio;
         this.#_updateProfileForm.country.value = this.#user.Country;
         this.#_updateProfileForm.city.value = this.#user.City;
+        this.querySelector("#coverImg-modal").src = `../../assets/cover/${this.#user.CoverURL}.jpg`;
+        this.querySelector("#profileImg-modal").src = `../../assets/PNG/128x128/128_${this.#user.photoURL}.png`;
         // this.coverURL();
         // this.photoURL();
     }

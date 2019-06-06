@@ -9,6 +9,12 @@
     max-height: 220px;
     overflow:hidden
 }
+
+.green-modal-bg{
+    min-height: 200px;
+    max-height: 220px;
+    overflow: hidden;
+}
 .page2-authorsa {
     background: white;
     padding-left: 24px;

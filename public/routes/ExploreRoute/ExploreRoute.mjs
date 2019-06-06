@@ -51,13 +51,15 @@ export default class ExploreRoute extends Component {
                 let artist = {
                     uid: res['data'].uid,
                     name: res['data'].displayName,
-                    bio: res['data'].Bio
+                    bio: res['data'].Bio,
+                    img: res['data'].photoURL
                 };
                 console.log(artist);
                 const searchResult = document.createElement("explore-artist");
                 searchResult.setAttribute("uid", artist.uid);
                 searchResult.setAttribute("name", artist.name);
                 searchResult.setAttribute("bio", artist.bio);
+                searchResult.setAttribute("img", artist.img);
                 _exploreResult.appendChild(searchResult);
 
             }
@@ -66,7 +68,8 @@ export default class ExploreRoute extends Component {
                         pid: res['data'].pid,
                         name: res['data'].PName,
                         author: res['author'],
-                        stars: res['data'].Stars
+                        stars: res['data'].Stars,
+                        img: res['data'].ImgURL
                     };
                 console.log(project);
                 const searchResult = document.createElement("explore-project");
@@ -74,6 +77,7 @@ export default class ExploreRoute extends Component {
                 searchResult.setAttribute("name", project.name);
                 searchResult.setAttribute("author", project.author);
                 searchResult.setAttribute("stars", project.stars);
+                searchResult.setAttribute("img", project.img);
                 _exploreResult.appendChild(searchResult);
 
             }
