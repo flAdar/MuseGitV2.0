@@ -9,11 +9,11 @@ export default class ProjectDisplayComponent extends Component {
         this.querySelector(".p-name").innerText=this.getAttribute('porjectDisplay');
         this.querySelector(".access").innerText=this.getAttribute('access');
         if(this.getAttribute('access')==='public'){
-            $('.icon').html("lock_open");
+            this.querySelector('.icon').innerHTML='lock_open';
         }
         else
         if(this.getAttribute('access')==='private'){
-            $('.icon').html("lock");
+            this.querySelector('.icon').innerHTML='lock';
         }
         this.querySelector(".enter").addEventListener('click',(event)=>{
             Application.Modules.RouterModule.redirect(`/project`,_pid);

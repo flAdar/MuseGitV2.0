@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/HomeRoute/HomeRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/HomeRoute/HomeRoute.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/ProfileRoute/ProfileRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/ProfileRoute/ProfileRoute.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/routes/ProfileRoute/ProfileRoute.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/public/routes/ProfileRoute/ProfileRoute.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
@@ -34,20 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.mjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="310">
+              <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="341">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -137,9 +136,9 @@
         <option value="$PROJECT_DIR$/public/components/HeaderComponent/HeaderComponent.html" />
         <option value="$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.html" />
         <option value="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.html" />
-        <option value="$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs" />
         <option value="$PROJECT_DIR$/public/routes/HomeRoute/HomeRoute.html" />
         <option value="$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.mjs" />
+        <option value="$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs" />
       </list>
     </option>
   </component>
@@ -243,12 +242,12 @@
       <workItem from="1558778468100" duration="50291000" />
       <workItem from="1559224090713" duration="14895000" />
       <workItem from="1559322470938" duration="209000" />
-      <workItem from="1559324136857" duration="77899000" />
+      <workItem from="1559324136857" duration="78280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192563000" />
+    <option name="totallyTimeSpent" value="192944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
@@ -593,13 +592,6 @@
     <entry file="file://$PROJECT_DIR$/public/routes/HomeRoute/HomeRoute.mjs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -630,8 +622,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/routes/MusespaceRoute/MusespaceRoute.mjs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="310">
+          <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/ProjectDisplayComponent/ProjectDisplayComponent.mjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
         </state>
       </provider>
     </entry>
