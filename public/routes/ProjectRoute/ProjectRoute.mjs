@@ -11,7 +11,7 @@ export default class ProjectRoute extends Component {
     onInit(){
 
         this.#projInfo = {
-            //proj_name: this.querySelector("#projName")
+            proj_name: this.querySelector("#projName"),
             pro_Disc: this.querySelector("#proDisc")
         };
 
@@ -43,7 +43,7 @@ export default class ProjectRoute extends Component {
         console.log(this.#a_project);
         console.log(this.#projInfo);
 
-        //this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
+        this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
         this.#projInfo.pro_Disc.innerHTML = this.#a_project.Description;
 
     }
