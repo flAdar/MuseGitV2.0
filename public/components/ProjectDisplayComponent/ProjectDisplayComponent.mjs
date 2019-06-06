@@ -7,7 +7,10 @@ export default class ProjectDisplayComponent extends Component {
     onInit(){
 
         this.querySelector(".p-name").innerText=this.getAttribute('porjectDisplay');
-        this.querySelector(".access").innerText=this.getAttribute('accsess');
+        this.querySelector(".access").innerText=this.getAttribute('access');
+        if(this.getAttribute('access')==='public'){
+            $('.icon').html("lock_open");
+        }
        
     }
     onSync(){

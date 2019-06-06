@@ -1,194 +1,117 @@
-<div class="projectsblog-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <div class="project-blog-total">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="blog-title">
-                                <p class="title3">Wellcome to your MuseSpace where you can create and edit your project</p>
-                                <p class="title2">your projects:</p>
+<div class="container">
+    <h5 class="s2">Wellcome to your MuseSpace where you can create and edit your project</h5>
+    <h6>Your projects:</h6>
+    <div class="card-deck" id="resProject">
+        <div class="card bg-light mb-3 text-center" style="max-width: 12rem; min-width:12rem; height: 12rem;">
+            <div class="card-header">New project</div>
+            <div class="card-body">
+                <a href="" data-toggle="modal" data-target="#exampleModalCenter2">
+                    <i class="material-icons" style="font-size: 50px">
+                        add_circle
+                    </i>
+                </a>
+                <h6 class="card-subtitle mb-2 text-muted">Add project</h6>
+            </div>
+        </div>
+    </div>
+
+    <h6>Collaborations:</h6>
+
+</div>
+
+
+<!--MODAL-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body width2">
+
+                <div class="info-wraps1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="info-titlew">
+                                    <h4>Project info and settings</h4>
+                                    <p>A projectcontains all project files, including the revision history.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="info-in">
+                                    <p>Project name*</p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="project-pic">
+                                    <p class="p-p">project image</p>
+                                    <span>(optional)</span>
+                                    <div class="pic-projectr">
+                                        <img src="../../assets/img/show1.svg" alt="">
+                                    </div>
 
-                        <!-- Button trigger modal -->
+                                </div>
+                            </div>
+                        </div>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="info-txt1">
+                                    <p>Description <span>(optional)</span></p>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
 
-                                    <div class="modal-body width2">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="info-lock1">
 
-                                        <div class="info-wraps1">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="info-titlew">
-                                                            <h4>Project info and settings</h4>
-                                                            <p>A projectcontains all project files, including the revision history.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="info-in">
-                                                            <p>Project name*</p>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div class="project-pic">
-                                                            <p class="p-p">project image</p>
-                                                            <span>(optional)</span>
-                                                            <div class="pic-projectr">
-                                                                <img src="../../assets/img/show1.svg" alt="">
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="info-txt1">
-                                                            <p>Description <span>(optional)</span></p>
-                                                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="info-lock1">
-
-                                                            <div class="radioo">
-                                                                <label class="container1">
-                                                                    <p><img src="../../assets/img/lock1.svg" alt="">public <br> <span>everyone can see this project, you choose who can edit.</span> </p>
-                                                                    <input type="radio" checked="checked" name="radio">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="info-lock1">
+                                    <div class="radioo">
+                                        <label class="container1">
+                                            <p><img src="../../assets/img/lock1.svg" alt="">public <br> <span>everyone can see this project, you choose who can edit.</span> </p>
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="info-lock1">
 
 
-                                                            <div class="radioo">
-                                                                <label class="container1">
-                                                                    <p><img src="../../assets/img/lock1.svg" alt="">public <br> <span>everyone can see this project, you choose who can edit.</span> </p>
+                                    <div class="radioo">
+                                        <label class="container1">
+                                            <p><img src="../../assets/img/lock1.svg" alt="">public <br> <span>everyone can see this project, you choose who can edit.</span> </p>
 
 
-                                                                    <input type="radio" name="radio">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="info-buttonn">
-                                                            <button type="submit">save</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div class="info-buttonn text-right">
-                                                            <button type="submit">Discard</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            <input type="radio" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-blog-wrap">
-                                <div class="single-blog blog1">
-                                    <a href="" data-toggle="modal" data-target="#exampleModalCenter2"><img src="../../assets/img/lock3.svg" alt=""></a>
-                                    <p>Add project</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="info-buttonn">
+                                    <button type="submit">save</button>
                                 </div>
                             </div>
-                        </div>
-                        <div id="resProject">
-
-                        </div>
-                        <!--
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-blog-wrap">
-                                <div class="single-blog blog2">
-                                    <p>project name 2</p>
-                                    <a href=""><span><img src="../../assets/img/lock2.svg" alt=""></span>public</a>
-                                </div>
-                            </div>
-                        </div>
-                   </div>
-                    -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="colaboratioa">
-                                <p>collaborations:</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-blog-wraprr">
-                                <div class="single-blogol">
-                                    <p>project name a</p>
-                                    <p>author:</p>
-                                    <div class="did1b">
-                                        <a href="">
-                                            <img src="../../assets/img/bel3.svg" alt="">
-                                            <span>NickName</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="locked1">
-                                    <div class="locke11">
-                                        <a href="">
-                                            <img src="../../assets/img/lock1.svg" alt="">
-                                            <span>private</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-blog-wraprr">
-                                <div class="single-blogol">
-                                    <p>project name a</p>
-                                    <p>author:</p>
-                                    <div class="did1b">
-                                        <a href="">
-                                            <img src="../../assets/img/bel3.svg" alt="">
-                                            <span>NickName</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="locked1">
-                                    <div class="locke11">
-                                        <a href="">
-                                            <img src="../../assets/img/lock2.svg" alt="">
-                                            <span>private</span>
-                                        </a>
-                                    </div>
+                            <div class="col-6">
+                                <div class="info-buttonn text-right">
+                                    <button type="submit">Discard</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+
             </div>
         </div>
     </div>
 </div>
+<!--END MODAL-->
