@@ -35,7 +35,7 @@ export default class MusespaceRoute extends Component {
             };
             const setResPro = document.createElement("project-result");
 
-            if(project.private == true){
+            if(project.private === true){
                 setResPro.setAttribute("access", 'private');
 
             }else{
