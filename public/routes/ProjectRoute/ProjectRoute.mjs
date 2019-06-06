@@ -2,11 +2,19 @@ import Component from "../../modules/Component.mjs";
 
 export default class ProjectRoute extends Component {
     #a_project;
+    #projInfo;
+
     constructor(){
         super();
     }
 
     onInit(){
+
+        this.#projInfo = {
+            //proj_name: this.querySelector("#projName")
+            pro_Disc: this.querySelector("#proDisc")
+        };
+
         Application.Modules.FireModule.queryProject(location.search.split('?')[1]);
 
         this._versions = document.getElementById('versions');
@@ -33,5 +41,10 @@ export default class ProjectRoute extends Component {
 
     renderProject(){
         console.log(this.#a_project);
+        console.log(this.#projInfo);
+
+        //this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
+        this.#projInfo.pro_Disc.innerHTML = this.#a_project.Description;
+
     }
 }
