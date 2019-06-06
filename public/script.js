@@ -8,66 +8,74 @@ import ProjectComponent from "./components/ProjectComponent/ProjectComponent.mjs
 import ProjectDisplayComponent from "./components/ProjectDisplayComponent/ProjectDisplayComponent.mjs";
 import AudioPlayerComponent from "./components/AudioPlayerComponent/AudioPlayerComponent.mjs";
 import FollowerComponent from "./components/FollowerComponent/FollowerComponent.mjs";
+import SmallProjectComponent from "./components/SmallProjectComponent/SmallProjectComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
+
     constructor() {
         this.#Imports = [
             {
-                selector:'FireModule',
+                selector: 'FireModule',
                 script: new FireModule
             },
             {
-                selector:'RouterModule',
+                selector: 'RouterModule',
                 script: new RouterModule
             },
             {
-                selector:'FormsModule',
+                selector: 'FormsModule',
                 script: new FormsModule
             }
         ];
         this.Declarations = [
             {
-                selector:'app-root',
-                component:AppComponent
+                selector: 'app-root',
+                component: AppComponent
             },
             {
-                selector:'app-header',
-                component:HeaderComponent
+                selector: 'app-header',
+                component: HeaderComponent
             },
             {
-                selector:'explore-artist',
-                component:ArtistComponent
+                selector: 'explore-artist',
+                component: ArtistComponent
             },
             {
-                selector:'explore-project',
-                component:ProjectComponent
+                selector: 'explore-project',
+                component: ProjectComponent
             }
             ,
             {
-                selector:'project-result',
-                component:ProjectDisplayComponent
+                selector: 'project-result',
+                component: ProjectDisplayComponent
             }
             ,
             {
-                selector:'audio-player',
+                selector: 'audio-player',
                 component: AudioPlayerComponent
             },
             {
-                selector:'follow-user',
+                selector: 'follow-user',
                 component: FollowerComponent
+            },
+            {
+                selector: 'small-project',
+                component: SmallProjectComponent
             }
 
         ];
     }
-    set Declarations (declarations){
-        for(const declaration of declarations){
-            customElements.define(declaration.selector,declaration.component)
+
+    set Declarations(declarations) {
+        for (const declaration of declarations) {
+            customElements.define(declaration.selector, declaration.component)
         }
     }
-    get Modules(){
-        let Modules={};
-        for(const Import of this.#Imports){
+
+    get Modules() {
+        let Modules = {};
+        for (const Import of this.#Imports) {
             Modules[Import.selector] = Import.script
         }
         return Modules

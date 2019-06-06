@@ -5,6 +5,7 @@ export default class ProfileRoute extends Component {
     #_updateProfileForm;
     #user;
     #follow;
+    #projects;
     constructor(){
         super();
     }
@@ -27,9 +28,13 @@ export default class ProfileRoute extends Component {
     onSync(){
         this.#user = Application.Modules.FireModule.user;
         this.#follow = Application.Modules.FireModule.follow;
+        this.#projects = Application.Modules.FireModule.projects;
         this.onUpdate('user',this.#user,[this.renderProfile,this.renderProfileForm]);
         if(this.#follow && this.#follow.length>0){
             this.onUpdate('follow',this.#follow,[this.renderFollow]);
+        }
+        if(this.#projects && this.#projects.length>0){
+            this.onUpdate('projects',this.#projects,[this.renderProjects]);
         }
 
 
@@ -89,6 +94,18 @@ export default class ProfileRoute extends Component {
 
         })
 
+    }
+    renderProjects(){
+        let _projects = this.querySelector(".video-wrap");
+        this.#projects.forEach(pro=>{
+            let _project = document.createElement('small-project');
+            _project.setAttribute('pid', pro['data'].pid);
+            _project.setAttribute('name', pro['data'].PName);
+            _project.setAttribute('img',pro['data'].ImgURL);
+            _project.setAttribute('star',pro['data'].Stars);
+            _projects.appendChild(_project);
+        });
+        // console.log(this.#projects);
     }
 
 
