@@ -34,11 +34,11 @@ export default class MusespaceRoute extends Component {
             };
             const setResPro = document.createElement("project-result");
 
-            if(project.private == true){
-                setResPro.setAttribute("status", 'private');
+            if(project.private === true){
+                setResPro.setAttribute("access", 'private');
 
             }else{
-                setResPro.setAttribute("status", 'public');
+                setResPro.setAttribute("access", 'public');
             }
             setResPro.setAttribute("porjectDisplay",project.name );
             _resProject.appendChild(setResPro);
