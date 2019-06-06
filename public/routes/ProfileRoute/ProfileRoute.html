@@ -202,13 +202,14 @@
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <div class="page2-blog-leftwrap">
-                    <div data-type="cover" class="page2-bluebg">
+                    <div data-type="cover" class="page2-bluebg " >
+                        <img id="coverImg" src="../../assets/cover/1.jpg" alt="cover">
                     </div>
                     <div class="page2-author">
                         <div class="page2-authorsa">
                             <div class="authorist-j">
                                 <a>
-                                    <img data-type="photo" src="../assets/img/bel3.svg" alt="profile picture">
+                                    <img id="profileImg" data-type="photo" src="../../assets/img/bel3.svg" alt="profile picture">
                                 </a>
                             </div>
                             <div id="userNameNBio">
@@ -216,10 +217,8 @@
                                 <p id="description">Description</p>
                                 <label id="userCity">Country </label><label>,</label><label id = "userCountry">city</label>
                             </div>
-                            <a href="" data-toggle="modal" data-target="#editProfileModal" class="right2s">Edit
-                                profile</a>
+                            <a href="" data-toggle="modal" data-target="#editProfileModal" class="edit"><img src="../../assets/img/pen.svg" alt="edit profile"></a>
                         </div>
-
                     </div>
                 </div>
 
@@ -230,12 +229,6 @@
                                 <p>Skills</p>
                                 <div class="skill-button">
                                     <div id="skills">
-
-                                    </div>
-                                    <div class="right-button">
-                                        <button data-toggle="modal" data-target="#editSkillsModal" class="right2s">
-                                            Edit skills
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -244,14 +237,10 @@
                                 <div class="skill-button">
                                     <div id="genres">
                                     </div>
-                                    <div class="right-button">
-                                        <button data-toggle="modal" data-target="#editGenresModal" class="right2s">
-                                            Edit
-                                            genres
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
+                            <a href="" data-toggle="modal" data-target="#editGenresModal" class="edit"><img src="../../assets/img/pen.svg" alt="edit skills and genres"></a>
+
                         </div>
                     </div>
                 </div>
@@ -259,61 +248,10 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="video-wrap">
                             <p>Projects</p>
-                            <div class="video-box">
-                                <p>Song Name</p>
-                                <div class="video-singleboxs">
-                                    <div class="video-imager-dish">
-                                        <div class="video-imager">
-                                            <img src="../../assets/img/video-image.svg" alt="">
 
-                                            <a class="popup-class"
-                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="star-t">
-                                        <span><i class="fa fa-star"></i>1.7K</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-box">
-                                <p>Song Name</p>
-                                <div class="video-singleboxs">
-                                    <div class="video-imager-dish">
-                                        <div class="video-imager">
-                                            <img src="../../assets/img/video-image.svg" alt="">
-                                            <a class="popup-class"
-                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="star-t">
-                                        <span><i class="fa fa-star"></i>879</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-box">
-                                <p>Song Name</p>
-                                <div class="video-singleboxs">
-                                    <div class="video-imager-dish">
-                                        <div class="video-imager">
-                                            <img src="../../assets/img/video-image.svg" alt="">
-                                            <a class="popup-class"
-                                               href="https://www.youtube.com/watch?v=XfdK49RGdLc">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="star-t">
-                                        <span><i class="fa fa-star"></i>3.1K</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-btn-e">
-                                <button>edit your project</button>
-                            </div>
+
+                            <a routerLink="/musespace" class="edit"><img src="../../assets/img/pen.svg" alt="edit skills and genres"></a>
+
                         </div>
                     </div>
                 </div>
@@ -321,90 +259,15 @@
             <div class="col-lg-4 col-md-4">
                 <div class="page2-blog-leftwrap2">
                     <p>Following</p>
-                    <div class="rightpage2-content">
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
+                    <div class="rightpage2-content" id="followings" >
 
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
                     </div>
                 </div>
 
                 <div class="page2-blog-leftwrap2 blogg2">
                     <p>Followers</p>
-                    <div class="rightpage2-content">
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
+                    <div class="rightpage2-content" id="followers">
 
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
-                        <div class="page2-author-22">
-                            <a href="">
-                                <img src="../../assets/img/author22.svg" alt="">
-                                <span>NickName</span>
-                            </a>
-
-                        </div>
                     </div>
                 </div>
             </div>

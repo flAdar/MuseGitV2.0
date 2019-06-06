@@ -626,9 +626,9 @@ button.c-3 {
   height: 35px;
   text-align: center;
   line-height: 35px;
-  border-radius: 50%;
+  border-radius: 0!important;
   display: inline-block;
-   background: #FCD2F4;
+  background: none!important;
 }
 
 .page3-bigborder.sem1 p {

@@ -14,6 +14,7 @@ import ProjectRoute from "../routes/ProjectRoute/ProjectRoute.mjs";
 import SupportRoute from "../routes/SupportRoute/SupportRoute.mjs";
 import VersionsRoute from "../routes/VersionsRoute/VersionsRoute.mjs";
 import VisitProfileRoute from "../routes/VisitProfileRoute/VisitProfileRoute.mjs";
+import VisitProjectRoute from "../routes/VisitProjectRoute/VisitProjectRoute.mjs";
 
 export default class RouterModule {
     #Routes = [];
@@ -97,6 +98,12 @@ export default class RouterModule {
                 path:'/visitProfile',
                 selector:'app-visitprofile',
                 component:VisitProfileRoute,
+                query:true
+            },
+            {
+                path:'/visitProject',
+                selector:'app-visitproject',
+                component:VisitProjectRoute,
                 query:true
             },
             {
