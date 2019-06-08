@@ -2482,7 +2482,7 @@
 		}
 
 		.image.fit {
-			display: inline-bloc;
+			display: inline-block;
 			margin: 0 0 2em 0;
 			width: 50%;
 		}
