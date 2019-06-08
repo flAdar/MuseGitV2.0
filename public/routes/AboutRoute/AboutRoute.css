@@ -2482,6 +2482,11 @@
 		}
 
 		.image.fit {
+			display: inline-bloc;
+			margin: 0 0 2em 0;
+			width: 50%;
+		}
+		.image.round.fit2{
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;

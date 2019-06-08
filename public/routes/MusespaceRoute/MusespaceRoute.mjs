@@ -9,10 +9,6 @@ export default class MusespaceRoute extends Component {
     }
     onInit(){
         this.#_project = this.querySelector(".blog2");
-        this.#_project.onclick = ()=>{
-            Application.Modules.RouterModule.redirect('/project');
-        }
-      
 
     }
 

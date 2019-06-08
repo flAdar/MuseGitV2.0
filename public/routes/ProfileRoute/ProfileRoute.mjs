@@ -10,6 +10,7 @@ export default class ProfileRoute extends Component {
         super();
     }
     onInit(){
+        this.#_updateProfileForm = this.querySelector('#updateProfile');
         this.#userInfo = {
             nickname: this.querySelector("#name"),
             bio: this.querySelector("#description"),
@@ -18,12 +19,15 @@ export default class ProfileRoute extends Component {
             county: this.querySelector("#userCountry"),
             city: this.querySelector("#userCity")
         };
-        this.#_updateProfileForm = this.querySelector('#updateProfile');
 
-        // if(this.#user){
-        //     this.renderProfile();
-        //     this.renderProfileForm();
-        // }
+        this.#_updateProfileForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const result = this.tempFormHandler(form);
+            console.log(result);
+            Application.Modules.FireModule.updateProfile(result);
+
+        });
     }
     onSync(){
         this.#user = Application.Modules.FireModule.user;
@@ -36,8 +40,6 @@ export default class ProfileRoute extends Component {
         if(this.#projects && this.#projects.length>0){
             this.onUpdate('projects',this.#projects,[this.renderProjects]);
         }
-
-
     }
 
     renderProfile(){
@@ -63,10 +65,11 @@ export default class ProfileRoute extends Component {
         }
     }
     renderProfileForm(){
-        this.#_updateProfileForm.onsubmit = (e)=>{
-            e.preventDefault();
-            const result = Application.Modules.FireModule.formHandler(e.target);
-        };
+        // this.#_updateProfileForm.onsubmit = (e)=>{
+        //     e.preventDefault();
+        //     const result = this.tempFormHandler(e.target);
+        //     Application.Modules.FireModule.updateProfile(result);
+        // };
         this.#_updateProfileForm.displayname.value = this.#user.displayName;
         this.#_updateProfileForm.firstname.value = this.#user.FirstName;
         this.#_updateProfileForm.lastname.value = this.#user.LastName;
@@ -108,6 +111,17 @@ export default class ProfileRoute extends Component {
             _projects.appendChild(_project);
         });
         // console.log(this.#projects);
+    }
+    tempFormHandler(form){
+        let result = {};
+        for (let i = 0; i < form.length; i++) {
+            const input = form[i];
+            console.dir(`index: ${i} data: ${input.name}`);
+            if(input.localName === 'input' || input.localName ==='textarea'){
+                result[input.name] = input.value;
+            }
+        }
+        return result;
     }
 
 
