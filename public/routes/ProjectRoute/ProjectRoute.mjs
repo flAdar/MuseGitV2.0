@@ -42,14 +42,13 @@ export default class ProjectRoute extends Component {
 
     renderProject(){
         setTimeout(() => {
-            console.log(this.#a_project);
-            console.log(this.#projInfo);
 
             this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
             this.#projInfo.pro_Disc.innerHTML = this.#a_project.Description;
 
             this.#projInfo.pro_img.src = `../../assets/album/${this.#a_project.ImgURL}.jpg`;
         },1000);
+        },2000);
 
 
         /** 
