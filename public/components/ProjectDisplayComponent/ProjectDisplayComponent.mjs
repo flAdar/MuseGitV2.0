@@ -3,6 +3,7 @@ import Component from "../../modules/Component.mjs";
 export default class ProjectDisplayComponent extends Component {
     constructor(){
         super();
+        // this.classList.add("card bg-light mb-3 text-center")
     }
     onInit(){
         let _pid = this.getAttribute('pid');

@@ -117,16 +117,30 @@ export default class RouterModule {
         // **** Set interval it may not catch some
         this.getCustomComponents('a',(hyperlinks)=>{
             for(const hyperlink of hyperlinks){
-                hyperlink.onclick = (e)=>{
+                hyperlink.addEventListener('click', (e)=>{
                     e.preventDefault();
                     const hyperlink = e.target;
                     const routerLink = hyperlink.getAttribute('routerLink');
                     if(routerLink){
                         this.redirect(routerLink)
                     }
-                }
+                });
             }
         },20)
+
+        this.getCustomComponents('img',(hyperlinks)=>{
+            for(const hyperlink of hyperlinks){
+                hyperlink.addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    const hyperlink = e.target;
+                    const routerLink = hyperlink.getAttribute('routerLink');
+                    if(routerLink){
+                        this.redirect(routerLink)
+                    }
+                });
+            }
+        },20)
+
     }
     // It will take time to load route depends on content "HTML" and script "MJS" so we set interval
     getCustomComponent (name,callback,timeout =1){
