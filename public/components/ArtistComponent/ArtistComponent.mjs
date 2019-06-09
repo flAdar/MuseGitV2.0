@@ -9,6 +9,7 @@ export default class ArtistComponent extends Component {
         this._uid =this.getAttribute("uid");
         this.querySelector(".name").innerText=this.getAttribute('name');
         this.querySelector(".bio").innerText=this.getAttribute('bio');
+        this.querySelector(".user-img").src=`../../assets/PNG/64x64/64_${this.getAttribute('img')}.png`;
         this.querySelector('.uid').addEventListener('click',(event)=>{
             this.follow(this._uid);
 

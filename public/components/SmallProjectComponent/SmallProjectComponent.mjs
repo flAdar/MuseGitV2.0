@@ -12,6 +12,10 @@ export default class SmallProjectComponent extends Component {
         this.querySelector('.album-cover').src = `../../assets/album/${this.getAttribute('img')}.jpg`;
         this.querySelector('.star').innerText= this.getAttribute('star');
 
+        this.querySelector('.visit').addEventListener('click',(event)=>{
+            Application.Modules.RouterModule.redirect(`/visitProject`,this._pid);
+        })
+
     }
     onSync(){
 

@@ -1,7 +1,7 @@
 export default class FireModule {
     #USER;
     #EXPLORE_RESULT;
-    #A_USER;
+    #A_USER={};
     #A_PROJECT;
     #FOLLOW=[];
 
@@ -85,6 +85,9 @@ export default class FireModule {
         return this.#FOLLOW;
     }
 
+    set a_user(result){
+        this.#A_USER = result;
+    }
     set explore_result(result) {
         this.#EXPLORE_RESULT = result;
     }
@@ -234,8 +237,38 @@ export default class FireModule {
     }
 
     queryUser(uid) {
+        this.#A_USER={};
         this.db.collection('users').doc(uid).get().then(doc => {
-            this.#A_USER = doc.data();
+            this.#A_USER['data'] = doc.data();
+            this.#A_USER['projects']=[];
+            this.#A_USER['follow']=[];
+            this.db.collection('projects').where('AuthorID', "==", doc.id)
+                .get().then((querySnapshot) => {
+                querySnapshot.forEach((pro_doc) => {
+                    this.#A_USER['projects'].push({data: pro_doc.data()});
+                });
+            });
+            this.db.collection('following').where('followOn.userID','==',doc.id)
+                .get().then((querySnapshot)=>{
+                querySnapshot.forEach((fol_doc) => {
+                    let followedBy = fol_doc.id.split('_')[3];
+                    console.log(followedBy)
+                    this.db.collection('users').doc(followedBy).get().then((user)=>{
+                        this.#A_USER['follow'].push({type:"follower",data: user.data()});
+                    })
+                });
+            });
+            this.db.collection('following').where('followedBy.userID','==',doc.id)
+                .get().then((querySnapshot)=>{
+                querySnapshot.forEach((fol_doc) => {
+                    let followOn = fol_doc.id.split('_')[1];
+                    console.log(followOn);
+                    this.db.collection('users').doc(followOn).get().then((user)=>{
+                        this.#A_USER['follow'].push({type:"following",data: user.data()});
+                    })
+                });
+            });
+
         })
     }
 
@@ -243,6 +276,32 @@ export default class FireModule {
         this.db.collection('projects').doc(pid).get().then(doc=>{
             this.#A_PROJECT = doc.data();
         })
+    }
+
+    updateProfile(info){
+        let userDoc = this.db.collection("users").doc(this.#USER.uid);
+        return userDoc.update({
+            FirstName: info.firstname,
+            LastName: info.lastname,
+            displayName: info.displayname,
+            Bio: info.bio,
+            Country: info.country,
+            City: info.city
+            // Genres: info.Genres,
+            // Skills: info.Skills,
+            // ImgURL:info.ImgURL,
+            // CoverURL: info.CoverURL
+        })
+            .then(function () {
+                console.log("Document successfully updated!");
+            })
+            .catch(function (error) {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+
+            });
+
+
     }
 
 

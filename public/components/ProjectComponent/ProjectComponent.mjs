@@ -9,6 +9,7 @@ export default class ProjectComponent extends Component {
         this.querySelector(".p-name").innerText=this.getAttribute('name');
         this.querySelector(".author").innerText=this.getAttribute('author');
         this.querySelector(".star").innerText=this.getAttribute('stars');
+        this.querySelector(".pro-img").src=`../../assets/album/${this.getAttribute('img')}.jpg`;
         this.querySelector(".join").addEventListener('click',(event)=>{
             this.askToJoin(this._pid);
         });
