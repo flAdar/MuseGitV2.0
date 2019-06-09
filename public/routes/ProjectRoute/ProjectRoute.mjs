@@ -12,7 +12,8 @@ export default class ProjectRoute extends Component {
 
         this.#projInfo = {
             proj_name: this.querySelector("#projName"),
-            pro_Disc: this.querySelector("#proDisc")
+            pro_Disc: this.querySelector("#proDisc"),
+            pro_img: this.querySelector("#projImg"),
         };
 
         Application.Modules.FireModule.queryProject(location.search.split('?')[1]);
@@ -45,6 +46,23 @@ export default class ProjectRoute extends Component {
 
         this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
         this.#projInfo.pro_Disc.innerHTML = this.#a_project.Description;
-
+       
+        this.#projInfo.pro_img.src = `../../assets/album/${this.#a_project.ImgURL}.jpg`;
+        /** 
+        const genres = this.querySelector('#proGenres');
+        if(genres.children.length !== this.#a_project.Genres.length) {
+            genres.innerHTML = '';
+            this.#a_project.Genres.forEach((genre) => {
+                genres.innerHTML += `<span class=\"badge badge-danger\">${genre}</span>`;
+            });
+        }
+        const collaborators = this.querySelector('#proColl');
+        if(collaborators.children.length !== this.#a_project.Genres.length) {
+            collaborators.innerHTML = '';
+            this.#a_project.Collaborators.forEach((collaborator) => {
+                collaborators.innerHTML += `<span class=\"page5-collaboratorsauthor\">${collaborator}</span>`;
+            });
+        }
+        */
     }
 }
