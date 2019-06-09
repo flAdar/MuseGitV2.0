@@ -1,0 +1,14 @@
+.page3-bigborder.sem1{
+    border: 0;
+}
+
+.page3-buttonss.text-right.sem1 {
+    width: 160px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.page3-buttonss.text-right.sem1 > button {
+    margin: auto;
+    height: 42px;
+}
