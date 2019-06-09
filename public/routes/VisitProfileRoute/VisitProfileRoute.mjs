@@ -27,6 +27,7 @@ export default class VisitProfileRoute extends Component {
     }
 
     renderProfile() {
+        
         this.#userInfo.nickname.innerHTML = this.#a_user.displayName;
         this.#userInfo.bio.innerHTML = this.#a_user.Bio;
         this.#userInfo.county.innerHTML = this.#a_user.Country;
