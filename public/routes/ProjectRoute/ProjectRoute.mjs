@@ -1,8 +1,8 @@
 import Component from "../../modules/Component.mjs";
 
 export default class ProjectRoute extends Component {
+    projInfo;
     #a_project;
-    #projInfo;
 
     constructor(){
         super();
@@ -17,7 +17,8 @@ export default class ProjectRoute extends Component {
         };
 
         Application.Modules.FireModule.queryProject(location.search.split('?')[1]);
-
+        this.proj_name= document.getElementById("projName"),
+        this.pro_Disc = document.getElementById("proDisc")
         this._versions = document.getElementById('versions');
         this._collaborators = document.getElementById('collaborators');
         this._project = document.getElementById('project');
@@ -37,7 +38,10 @@ export default class ProjectRoute extends Component {
 
     onSync(){
         this.#a_project = Application.Modules.FireModule.a_project;
-        this.onUpdate('a_project', this.#a_project, [this.renderProject]);
+        if(this.#a_project){
+            this.onUpdate('a_project', this.#a_project, [this.renderProject]);
+        }
+  
     }
 
     renderProject(){
