@@ -1,7 +1,7 @@
 import Component from "../../modules/Component.mjs";
 
 export default class ProjectRoute extends Component {
-    projInfo;
+    #projInfo;
     #a_project;
 
     constructor(){
@@ -45,32 +45,27 @@ export default class ProjectRoute extends Component {
     }
 
     renderProject(){
-        setTimeout(() => {
             console.log(this.#a_project);
             console.log(this.#projInfo);
 
             this.#projInfo.proj_name.innerHTML = this.#a_project.PName;
             this.#projInfo.pro_Disc.innerHTML = this.#a_project.Description;
 
-            this.#projInfo.pro_img.src = `../../assets/album/${this.#a_project.ImgURL}.jpg`;
-        },1000);
-
-
-        /** 
-        const genres = this.querySelector('#proGenres');
-        if(genres.children.length !== this.#a_project.Genres.length) {
-            genres.innerHTML = '';
-            this.#a_project.Genres.forEach((genre) => {
-                genres.innerHTML += `<span class=\"badge badge-danger\">${genre}</span>`;
-            });
-        }
-        const collaborators = this.querySelector('#proColl');
-        if(collaborators.children.length !== this.#a_project.Genres.length) {
-            collaborators.innerHTML = '';
-            this.#a_project.Collaborators.forEach((collaborator) => {
-                collaborators.innerHTML += `<span class=\"page5-collaboratorsauthor\">${collaborator}</span>`;
-            });
-        }
-        */
+            this.#projInfo.pro_img.src = (`../../assets/album/${this.#a_project.ImgURL}.jpg`);
+        
+            // const genres = this.querySelector('#proGenres');
+            // if(genres.children.length !== this.#a_project.Genres.length) {
+            //     genres.innerHTML = '';
+            //     this.#a_project.Genres.forEach((genre) => {
+            //         genres.innerHTML += `<span class=\"badge badge-danger\">${genre}</span>`;
+            //     });
+            // };
+            // const collaborators = this.querySelector('#proColl');
+            // if(collaborators.children.length !== this.#a_project.Genres.length) {
+            //     collaborators.innerHTML = '';
+            //     this.#a_project.Collaborators.forEach((collaborator) => {
+            //         collaborators.innerHTML += `<span class=\"page5-collaboratorsauthor\">${collaborator}</span>`;
+            //     });
+            // }
     }
 }
