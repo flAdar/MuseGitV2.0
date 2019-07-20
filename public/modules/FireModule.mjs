@@ -320,12 +320,16 @@ export default class FireModule {
 
         this.db.collection("projects").add({
 
-            Pname : Proinfo.Proname,
-            Private : Proinfo.radio,
-            Discription : Proinfo.ProjectDisc,
-            pid : '123'
-            
-            
+            Author : '/users/' + this.#USER.uid,
+            AuthorID : this.#USER.uid,
+            Description : '',
+            Genres : '',
+            imgURL : '',
+            PName : Proinfo.Proname,
+            Private : false,
+            Stars: '0',
+            StorageURK: "",
+            pid: ''
         }).then(function () {
             console.log("Project successfully created!");
         })
