@@ -4,12 +4,27 @@ export default class MusespaceRoute extends Component {
     //#_project;
     resProject;
     user;
+    #_NewProjectFrom;
+    
+    
     constructor(){
         super();
     }
     onInit(){
-        //this.#_project = this.querySelector(".blog2");
+        console.log('Enter');
 
+        this.#_NewProjectFrom = this.querySelector('#New_Project_From');
+       
+
+       
+        this.#_NewProjectFrom.addEventListener('submit', (event) => {
+            console.log('SUBMIT');
+            event.preventDefault();
+            const form = event.target;
+            const result = this.creatNewProjectForm(form);
+            console.log(result);
+            Application.Modules.FireModule.creatNewProject(result);
+        });
     }
 
     onSync(){
@@ -41,8 +56,24 @@ export default class MusespaceRoute extends Component {
             setResPro.setAttribute('pid',project.pid);
             _resProject.appendChild(setResPro);
             console.log(project);
+            console.log('ENTERRR');
 
         }
 
+    }
+
+    //Yaharin -> Creating New Project
+
+    creatNewProjectForm(form){
+        let result = {};
+        for (let i = 0; i < form.length; i++) {
+            const input = form[i];
+            console.dir(`index: ${i} data: ${input.name}`);
+            if(input.localName === 'input' || input.localName ==='textarea'){
+                result[input.name] = input.value;
+            }
+        }
+        console.log(result);
+        return result;
     }
 }

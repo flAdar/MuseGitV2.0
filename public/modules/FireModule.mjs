@@ -316,6 +316,28 @@ export default class FireModule {
     }
 
 
+    creatNewProject(Proinfo){
+
+        this.db.collection("projects").add({
+
+            Pname : Proinfo.Proname,
+            Private : Proinfo.radio,
+            Discription : Proinfo.ProjectDisc,
+            pid : '123'
+            
+            
+        }).then(function () {
+            console.log("Project successfully created!");
+        })
+        .catch(function (error) {
+            // The document probably doesn't exist.
+            console.error("Error creating project: ", error);
+
+        });
+
+
+    }
+
 
 }
 
