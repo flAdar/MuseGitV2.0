@@ -318,7 +318,9 @@ export default class FireModule {
 
     creatNewProject(Proinfo){
 
-        this.db.collection("projects").add({
+        var newProjectRef = this.db.collection("projects").doc();
+
+        newProjectRef.set({
 
             Author : '/users/' + this.#USER.uid,
             AuthorID : this.#USER.uid,
@@ -329,8 +331,9 @@ export default class FireModule {
             Private : false,
             Stars: '0',
             StorageURK: "",
-            pid: ''
-        }).then(function () {
+            pid: newProjectRef.id
+
+        }).then(function (docRef) {
             console.log("Project successfully created!");
         })
         .catch(function (error) {
