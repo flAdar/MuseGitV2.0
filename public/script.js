@@ -9,6 +9,7 @@ import ProjectDisplayComponent from "./components/ProjectDisplayComponent/Projec
 import AudioPlayerComponent from "./components/AudioPlayerComponent/AudioPlayerComponent.mjs";
 import FollowerComponent from "./components/FollowerComponent/FollowerComponent.mjs";
 import SmallProjectComponent from "./components/SmallProjectComponent/SmallProjectComponent.mjs";
+import ChannelComponent from "./components/ChannelComponent/ChannelComponent.mjs";
 
 window['Application'] = new class Application {
     #Imports;
@@ -62,7 +63,12 @@ window['Application'] = new class Application {
             {
                 selector: 'small-project',
                 component: SmallProjectComponent
+            },
+            {
+                selector: 'project-channel',
+                component: ChannelComponent
             }
+
 
         ];
     }

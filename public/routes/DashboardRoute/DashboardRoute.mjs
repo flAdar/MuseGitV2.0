@@ -13,7 +13,17 @@ export default class DashboardRoute extends Component {
             bio: this.querySelector("#description"),
             img: this.querySelector("#profileImg"),
             cover: this.querySelector("#coverImg")
-        }
+        };
+
+        this.querySelector("#D_profile").addEventListener("click",()=>{
+            Application.Modules.RouterModule.redirect("./profile");
+        });
+        this.querySelector("#D_musespace").addEventListener("click",()=>{
+            Application.Modules.RouterModule.redirect("./musespace");
+        });
+        this.querySelector("#D_explore").addEventListener("click",()=>{
+            Application.Modules.RouterModule.redirect("./explore");
+        });
 
     }
 

@@ -130,55 +130,16 @@
                     </div>
 
                     <div class="page5-popups-wrap">
-                        <div class="page3-popups-wrap">
-                            <div class="page3-singlepopups page5-popup">
-                                <div class="page3-image1s sem1 page5-play">
-
-                                    <a class="popup-class" href="https://www.youtube.com/watch?v=XfdK49RGdLc">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-
-                                <div class="page3-bigborder sem1 page5-bb">
-                                    <p>Guitar channel</p>
-                                    <span></span>
-                                </div>
-
-                                <div class="page3-buttonss text-right sem1 page5-file">
-											<span>
-												<button>edit file</button>
-												<a href=""><img src="../../assets/img/bel3.svg" alt=""></a>
-												<label for="">NickName</label>
-											</span>
-                                </div>
-                            </div>
-
-                            <div class="page3-singlepopups page5-popup">
-                                <div class="page3-image1s sem1 page5-play">
-                                    <a class="popup-class" href="https://www.youtube.com/watch?v=XfdK49RGdLc">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-
-                                <div class="page3-bigborder sem1 page5-bb">
-                                    <p>Voice channel</p>
-                                    <span></span>
-                                </div>
-
-                                <div class="page3-buttonss text-right sem1 page5-file">
-											<span>
-												<button>edit file</button>
-												<a href=""><img src="../../assets/img/bel3.svg" alt=""></a>
-												<label for="">NickName</label>
-											</span>
-                                </div>
-                            </div>
-
+                        <div class="page3-popups-wrap" id="channels-placeholder">
+                            <!-- HERE WE ADD CHANNELS -->
                         </div>
 
                         <div class="page5-addchanel-wrap">
                             <div class="page5-addchanel">
-                                <a href=""><img src="../../assets/img/lock3.svg" alt=""></a><span>Add channel</span>
+                                <a onclick="document.getElementById('file-input').click();">
+                                    <img src="../../assets/img/lock3.svg" alt="">
+                                </a><span>Add channel</span>
+                                <input id="file-input" type="file" name="name" style="display: none;" />
                             </div>
 
                             <div class="page5-input">
@@ -187,10 +148,11 @@
 
                             <div class="page5-buttonsgroup-wrap">
                                 <p>Genres</p>
+                                <div id="proGenres">
+
+                                </div>
                                 <div class="page5-buttonsgroup">
-                                    <div id="proGenres">
-                                        
-                                    </div>
+
                                     <span>add genres</span>
                                 </div>
 

@@ -126,7 +126,7 @@ export default class RouterModule {
                     }
                 });
             }
-        },20)
+        },20);
 
         this.getCustomComponents('img',(hyperlinks)=>{
             for(const hyperlink of hyperlinks){

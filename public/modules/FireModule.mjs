@@ -4,6 +4,7 @@ export default class FireModule {
     #A_USER={};
     #A_PROJECT;
     #FOLLOW=[];
+    #CHANNELS = [];
 
     //Projects Vars
     #PROJECTS = [];
@@ -79,6 +80,10 @@ export default class FireModule {
 
     get a_project(){
         return this.#A_PROJECT;
+    }
+
+    get channels(){
+        return this.#CHANNELS;
     }
 
     get follow(){
@@ -275,6 +280,12 @@ export default class FireModule {
     queryProject(pid){
         this.db.collection('projects').doc(pid).get().then(doc=>{
             this.#A_PROJECT = doc.data();
+            this.#CHANNELS = doc.data().Channels;
+            //console.dir(doc.data().Channels.data());
+            // for(let s in doc.data().Channels){
+            //     this.#CHANNELS.push(s);
+            // }
+            // console.log(this.#CHANNELS)
         })
     }
 
