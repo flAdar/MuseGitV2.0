@@ -342,6 +342,8 @@ export default class FireModule {
 
         });
 
+        return newProjectRef;
+
 
     }
 

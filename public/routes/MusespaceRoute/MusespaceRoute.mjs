@@ -1,7 +1,6 @@
 import Component from "../../modules/Component.mjs";
 
 export default class MusespaceRoute extends Component {
-    //#_project;
     resProject;
     user;
     #_NewProjectFrom;
@@ -10,20 +9,21 @@ export default class MusespaceRoute extends Component {
     constructor(){
         super();
     }
+
     onInit(){
         console.log('Enter');
 
         this.#_NewProjectFrom = this.querySelector('#New_Project_From');
        
-
-       
         this.#_NewProjectFrom.addEventListener('submit', (event) => {
-            console.log('SUBMIT');
             event.preventDefault();
             const form = event.target;
             const result = this.creatNewProjectForm(form);
             console.log(result);
-            Application.Modules.FireModule.creatNewProject(result);
+            const result_new = Application.Modules.FireModule.creatNewProject(result);
+            const pid = result_new['_key']['path']['segments'][1];
+            console.log(pid);
+            Application.Modules.RouterModule.redirect(`/visitProject`,pid);
         });
     }
 
@@ -56,7 +56,6 @@ export default class MusespaceRoute extends Component {
             setResPro.setAttribute('pid',project.pid);
             _resProject.appendChild(setResPro);
             console.log(project);
-            console.log('ENTERRR');
 
         }
 
@@ -73,7 +72,8 @@ export default class MusespaceRoute extends Component {
                 result[input.name] = input.value;
             }
         }
-        console.log(result);
+
+        console.log('RESULT' + result);
         return result;
     }
 }
